@@ -1,5 +1,9 @@
 # Ember-Sinon-QUnit
 
+[![Dependency Status](https://www.versioneye.com/user/projects/56185d0da193340f28000285/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56185d0da193340f28000285)
+[![Code Climate](https://codeclimate.com/github/elwayman02/ember-sinon-qunit/badges/gpa.svg)](https://codeclimate.com/github/elwayman02/ember-sinon-qunit)
+[![Codacy Badge](https://api.codacy.com/project/badge/8c6fbb028801423fbd4b1bfe17c9b1a0)](https://www.codacy.com/app/hawker-jordan/ember-sinon-qunit)
+
 This addon integrates [Sinon](http://jhawk.co/sinonjs) & [Ember-QUnit](http://jhawk.co/ember-qunit) 
 via [Ember-Sinon](http://jhawk.co/ember-sinon), as inspired by [Sinon-QUnit](http://jhawk.co/sinon-qunit).
 

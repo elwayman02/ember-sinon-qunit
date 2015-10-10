@@ -7,7 +7,7 @@
     "ember-load-initializers": "0.1.7",
     "ember-qunit": "0.4.13",
     "ember-qunit-notifications": "0.1.0",
-    "jquery": "^1.11.3",
+    "jquery": "2.1.4",
     "loader.js": "3.3.0",
     "qunit": "~1.19.0",
     "sinonjs": "~1.17.1"
