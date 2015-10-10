@@ -3,6 +3,6 @@ module.exports = {
   normalizeEntityName: function() {}, // no-op since we're just adding dependencies
 
   afterInstall: function () {
-    this.addAddonToProjecT('ember-sinon');
+    return this.addAddonToProject('ember-sinon');
   }
 };
