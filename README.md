@@ -17,6 +17,10 @@ via the sandbox will be automatically restored to their original methods at the 
 Ember-Sinon to remove its QUnit specific functionality, making it easier to utilize Ember-Sinon 
 with other addons like [Ember-CLI-Mocha](http://jhawk.co/ember-cli-mocha), for example.
 
+## Installation
+
+`ember install ember-sinon-qunit`
+
 ## Usage
 
 Import Ember-Sinon-QUnit's `test` method into your tests in place of Ember-QUnit's test. This creates a Sinon `sandbox`
