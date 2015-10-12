@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import { module } from 'qunit';
-import test from 'ember-sinon-qunit/test';
+import test from '../ember-sinon-qunit/test';
 
 let obj = {
   foo: Ember.K,
