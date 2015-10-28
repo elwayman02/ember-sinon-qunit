@@ -31,6 +31,7 @@ via `this` within the test callback:
 ```javascript
 import { moduleFor } from 'ember-qunit';
 import test from 'my-app/tests/ember-sinon-qunit/test';
+//import test from 'dummy/tests/ember-sinon-qunit/test'; => In case of addons
 
 moduleFor('route:foo', 'Unit | Route | foo');
 
@@ -51,6 +52,7 @@ loss of functionality. Or, you can import them both into the same test to be use
 ```javascript
 import { moduleFor, test } from 'ember-qunit';
 import sinonTest from 'my-app/tests/ember-sinon-qunit/test';
+//import sinonTest from 'dummy/tests/ember-sinon-qunit/test'; => In case of addons
 ```
 
 ## Contributing
