@@ -56,3 +56,15 @@ test('sinon sandbox cleans up after itself', function (assert) {
   assert.ok(!spy.called, 'spy has no registered calls');
   assert.ok(!stub.called, 'stub has no registered calls');
 });
+
+test('does not fake timers by default', function (assert) {
+  assert.notEqual(Date.now(), 0, 'Date.now() is not reset');
+});
+
+test('does fake timers on request', { useFakeTimers: true }, function (assert) {
+  assert.equal(Ember.typeOf(this.clock), 'object', 'clock exists');
+
+  assert.equal(Date.now(), 0, 'Date.now() is set to 0');
+  this.clock.tick(1234);
+  assert.equal(Date.now(), 1234, 'Date.now() is set to 1234');
+});

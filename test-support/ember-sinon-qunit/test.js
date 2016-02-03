@@ -14,18 +14,24 @@ sinon.assert.pass = function (assertion) {
 sinon.config = {
   injectIntoThis: false,
   injectInto: null,
-  properties: ['spy', 'stub', 'mock', 'sandbox'],
+  properties: ['spy', 'stub', 'mock', 'sandbox', 'clock'],
   useFakeTimers: false,
   useFakeServer: false
 };
 
-export default function test(testName, callback) {
+export default function test(testName, options, callback) {
+  if (arguments.length < 3) {
+    callback = options;
+    options = {};
+  }
+
   function sinonWrapper() {
     let context = this;
     if (Ember.isBlank(context)) {
       context = {};
     }
     sinon.config.injectInto = context;
+    sinon.config.useFakeTimers = !!options.useFakeTimers;
 
     return sinon.test(callback).apply(context, arguments);
   }
