@@ -2,16 +2,22 @@ import Ember from 'ember';
 import { module } from 'qunit';
 import test from 'dummy/tests/ember-sinon-qunit/test';
 
+const { K: EmptyFunc, isPresent, typeOf } = Ember;
+
 let obj = {
-  foo: Ember.K,
-  bar: Ember.K,
-  baz: Ember.K
+  foo: EmptyFunc,
+  bar: EmptyFunc,
+  baz: EmptyFunc
 };
 
-module('Unit | ember-sinon-qunit');
+module('Unit | ember-sinon-qunit', {
+  beforeEach() {
+    this.foo = 'foo';
+  }
+});
 
 test('brings spy() into test context', function (assert) {
-  assert.equal(Ember.typeOf(this.spy), 'function', 'spy exists');
+  assert.equal(typeOf(this.spy), 'function', 'spy exists');
 
   const spy = this.spy(obj, 'foo');
   obj.foo();
@@ -20,7 +26,7 @@ test('brings spy() into test context', function (assert) {
 });
 
 test('brings stub() into test context', function (assert) {
-  assert.equal(Ember.typeOf(this.stub), 'function', 'stub exists');
+  assert.equal(typeOf(this.stub), 'function', 'stub exists');
 
   const stub = this.stub(obj, 'bar');
   obj.bar();
@@ -29,7 +35,7 @@ test('brings stub() into test context', function (assert) {
 });
 
 test('brings mock() into test context', function (assert) {
-  assert.equal(Ember.typeOf(this.mock), 'function', 'mock exists');
+  assert.equal(typeOf(this.mock), 'function', 'mock exists');
 
   const mock = this.mock(obj);
   mock.expects('baz').once();
@@ -39,7 +45,7 @@ test('brings mock() into test context', function (assert) {
 });
 
 test('brings sandbox() into test context', function (assert) {
-  assert.equal(Ember.typeOf(this.sandbox), 'object', 'sandbox exists');
+  assert.equal(typeOf(this.sandbox), 'object', 'sandbox exists');
   assert.equal(this.sandbox.injectInto, this, 'sandbox was injected into this');
   const keys = this.sandbox.injectedKeys;
   assert.equal(keys.length, 4, '4 keys were injected');
@@ -55,4 +61,8 @@ test('sinon sandbox cleans up after itself', function (assert) {
 
   assert.ok(!spy.called, 'spy has no registered calls');
   assert.ok(!stub.called, 'stub has no registered calls');
+});
+
+test('does not destroy context from beforeEach', function (assert) {
+  assert.ok(isPresent(this.foo), 'this.foo exists');
 });
