@@ -59,12 +59,13 @@ import sinonTest from 'my-app/tests/ember-sinon-qunit/test';
 
 ### Installation
 
-* `git clone` this repository
+* `git clone git@github.com:elwayman02/ember-sinon-qunit.git`
 * `cd ember-sinon-qunit`
 * `npm install`
 * `bower install`
 
 ### Running Tests
 
+* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
