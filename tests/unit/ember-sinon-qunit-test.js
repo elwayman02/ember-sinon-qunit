@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { module } from 'qunit';
+import { module, skip } from 'qunit';
 import test from 'dummy/tests/ember-sinon-qunit/test';
 
 const { K: EmptyFunc, isPresent, typeOf } = Ember;
@@ -63,6 +63,6 @@ test('sinon sandbox cleans up after itself', function (assert) {
   assert.ok(!stub.called, 'stub has no registered calls');
 });
 
-test('does not destroy context from beforeEach', function (assert) {
+skip('does not destroy context from beforeEach', function (assert) {
   assert.ok(isPresent(this.foo), 'this.foo exists');
 });
