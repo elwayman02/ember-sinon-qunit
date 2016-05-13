@@ -1,6 +1,6 @@
 {
   "name": "ember-sinon-qunit",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Sinon sandbox test integration for QUnit",
   "directories": {
     "doc": "doc",
@@ -47,6 +47,8 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "after": ["ember-sinon"]
+    "after": [
+      "ember-sinon"
+    ]
   }
 }
