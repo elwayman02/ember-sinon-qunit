@@ -1,5 +1,5 @@
 import { moduleForComponent } from 'ember-qunit';
-import test from 'dummy/tests/ember-sinon-qunit/test';
+import test from 'ember-sinon-qunit/test-support/test';
 import hbs from 'htmlbars-inline-precompile';
 import assertSinonInTestContext from '../../helpers/assert-sinon-in-test-context';
 

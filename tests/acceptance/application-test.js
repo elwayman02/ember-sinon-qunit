@@ -1,7 +1,7 @@
 import { skip } from 'qunit';
 import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 import assertSinonInTestContext from '../../tests/helpers/assert-sinon-in-test-context';
-import test from 'dummy/tests/ember-sinon-qunit/test';
+import test from 'ember-sinon-qunit/test-support/test';
 
 const fooValue = 42;
 
