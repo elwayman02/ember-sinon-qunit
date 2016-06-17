@@ -20,15 +20,36 @@ sinon.config = {
 };
 
 export default function test(testName, callback) {
-  function sinonWrapper() {
+
+  let wrapper = function () {
     let context = this;
     if (Ember.isBlank(context)) {
       context = {};
     }
-    sinon.config.injectInto = context;
 
-    return sinon.test(callback).apply(context, arguments);
+    let config = sinon.getConfig(sinon.config);
+    config.injectInto = context;
+    let sandbox = sinon.sandbox.create(config);
+
+    let result = callback.apply(context, arguments);
+    if (result && result.then) {
+      return result.then(data => {
+        sandbox.verifyAndRestore();
+        return data;
+      }, data => {
+        sandbox.restore();
+        return Promise.reject(data);
+      });
+    }
+
+    sandbox.verifyAndRestore();
+    return result;
+  };
+
+  try {
+    return emberQUnitTest(testName, wrapper);
+  } catch (exception) {
+    sandbox.restore();
+    throw exception;
   }
-
-  return emberQUnitTest(testName, sinonWrapper);
 }
