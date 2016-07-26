@@ -21,7 +21,7 @@
   "author": "Jordan Hawker <hawker.jordan@gmail.com> (http://www.JordanHawker.com)",
   "license": "MIT",
   "devDependencies": {
-    "ember-cli": "2.6.3",
+    "ember-cli": "2.7.0",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-dependency-checker": "^1.2.0",
     "ember-cli-htmlbars": "^1.0.5",
