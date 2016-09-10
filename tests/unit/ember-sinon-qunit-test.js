@@ -1,4 +1,5 @@
 import { module, skip } from 'qunit';
+import { isPresent } from 'ember-utils';
 import test from 'ember-sinon-qunit/test-support/test';
 import assertSinonInTestContext from '../helpers/assert-sinon-in-test-context';
 
