@@ -48,17 +48,16 @@ export default function test(testName, callback) {
     let promise = Ember.RSVP.resolve(result).then(data => {
       // When `assert.async()` is called, the best way found to
       // detect completion (so far) is to poll the semaphore. :(
+      // (Esp. for cases where the test timed out.)
       let poll = (resolve, reject) => {
         // Afford for the fact that we are returning a promise, which
         // bumps the semaphore to at least 1. So when it drops to 1
         // then everything else is complete.
-        // (0 means it already failed, e.g. by timing out.)
-        if (currentTest.semaphore <= 1) {
-          if (!currentTest.semaphore) {
-            reject(ALREADY_FAILED);
-          } else {
-            resolve(data);
-          }
+        // (0 means it already failed, e.g. by timing out. - handled below)
+        if (currentTest.semaphore === 1) {
+          clearTimeout(testTimeoutPollerId);
+          testTimeoutDeferred.resolve();
+          resolve(data);
         } else {
           setTimeout(poll, 10, resolve, reject);
         }
@@ -67,9 +66,24 @@ export default function test(testName, callback) {
       return new Ember.RSVP.Promise(poll);
     });
 
-    // todo: break into two polls: for zero, and one
 
-    return promise.then(data => {
+    // Watch for cases where either the `result` thenable
+    // or `assert.async()` times out and ensure cleanup.
+    let testTimeoutPollerId = 0;
+    let testTimeoutPoll = () => {
+      // 0 means it already failed, e.g. by timing out.
+      if (!currentTest.semaphore) {
+        testTimeoutDeferred.reject(ALREADY_FAILED);
+      } else {
+        testTimeoutPollerId = setTimeout(testTimeoutPoll, 10);
+      }
+    };
+    let testTimeoutDeferred = Ember.RSVP.defer();
+    // delay first check so that the returned promise can bump the semaphore
+    setTimeout(testTimeoutPoll);
+
+
+    return Ember.RSVP.all([promise, testTimeoutDeferred.promise]).then(([data]) => {
       sandbox.verifyAndRestore();
       return data;
     }, error => {
