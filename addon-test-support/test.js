@@ -2,13 +2,14 @@ import Ember from 'ember';
 import sinon from 'sinon';
 import QUnit from 'qunit';
 import { test as emberQUnitTest } from 'ember-qunit';
+import { isBlank } from 'ember-utils';
 
 sinon.expectation.fail = sinon.assert.fail = function (msg) {
-  QUnit.ok(false, msg);
+  QUnit.assert.ok(false, msg);
 };
 
 sinon.assert.pass = function (assertion) {
-  QUnit.ok(true, assertion);
+  QUnit.assert.ok(true, assertion);
 };
 
 sinon.config = {
@@ -22,11 +23,10 @@ sinon.config = {
 let ALREADY_FAILED = {};
 
 export default function test(testName, callback) {
-
   let sandbox;
   let wrapper = function () {
     let context = this;
-    if (Ember.isBlank(context)) {
+    if (isBlank(context)) {
       context = {};
     }
 
