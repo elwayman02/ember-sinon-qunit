@@ -1,14 +1,15 @@
-import { module, skip } from 'qunit';
-import { isPresent } from 'ember-utils';
+import { module } from 'qunit';
 import test from 'ember-sinon-qunit/test-support/test';
 import assertSinonInTestContext from '../helpers/assert-sinon-in-test-context';
 import Ember from 'ember';
 
+let fooValue = 42;
 let origMethod;
 let obj;
+
 module('Unit | ember-sinon-qunit', {
   beforeEach() {
-    this.foo = 'foo';
+    this.foo = fooValue;
 
     origMethod = () => {};
     obj = {
@@ -23,11 +24,8 @@ module('Unit | ember-sinon-qunit', {
 
 assertSinonInTestContext(test);
 
-// Currently, the context of `module` is not shared by
-// ember-sinon-qunit's `test` context
-// (See: https://github.com/elwayman02/ember-sinon-qunit/issues/25#issuecomment-222022526)
-skip('does not destroy context from beforeEach', function (assert) {
-  assert.ok(isPresent(this.foo), 'this.foo exists');
+test('does not destroy context from beforeEach', function (assert) {
+  assert.equal(this.foo, fooValue);
 });
 
 test('async with assert.async()', function (assert) {
@@ -63,4 +61,3 @@ test('async with Promise and assert.async()', function (assert) {
     });
   });
 });
-

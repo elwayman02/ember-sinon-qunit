@@ -14,6 +14,5 @@ moduleForComponent('video-player', 'Integration | Component | video player', {
 assertSinonInTestContext(test);
 
 test('preserving the context from the `beforeEach` hook', function (assert) {
-  assert.ok(this.foo);
   assert.equal(this.foo, fooValue);
 });
