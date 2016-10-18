@@ -1,5 +1,5 @@
 import { moduleForComponent } from 'ember-qunit';
-import test from 'dummy/tests/ember-sinon-qunit/test';
+import test from 'ember-sinon-qunit/test-support/test';
 import assertSinonInTestContext from '../../helpers/assert-sinon-in-test-context';
 
 const fooValue = 42;
