@@ -16,7 +16,7 @@
     "url": "https://github.com/elwayman02/ember-sinon-qunit/issues"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4"
   },
   "author": "Jordan Hawker <hawker.jordan@gmail.com> (http://www.JordanHawker.com)",
   "license": "MIT",
