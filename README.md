@@ -64,6 +64,6 @@ import sinonTest from 'ember-sinon-qunit/test-support/test';
 
 ### Running Tests
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
+* `npm test`
 * `ember test`
 * `ember test --server`
