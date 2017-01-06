@@ -1,11 +1,13 @@
 import Ember from 'ember';
 
-const { K: EmptyFunc, typeOf } = Ember;
+const {
+  typeOf
+} = Ember;
 
 const obj = {
-  foo: EmptyFunc,
-  bar: EmptyFunc,
-  baz: EmptyFunc
+  foo() {},
+  bar() {},
+  baz() {}
 };
 
 /**
