@@ -23,7 +23,7 @@
     "test": "ember test"
   },
   "dependencies": {
-    "ember-cli-babel": "^5.1.7",
+    "ember-cli-babel": "^6.0.0",
     "ember-sinon": "~0.7.0"
   },
   "devDependencies": {
