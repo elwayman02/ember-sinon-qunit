@@ -22,6 +22,27 @@ sinon.config = {
 
 let ALREADY_FAILED = {};
 
+const DEFAULT_SINON_CONFIG = {
+  injectIntoThis: true,
+  injectInto: null,
+  properties: ["spy", "stub", "mock", "clock", "server", "requests"],
+  useFakeTimers: true,
+  useFakeServer: true
+};
+
+function getConfig(overrides = {}) {
+  let config = {};
+  let prop;
+
+  for (prop in overrides) {
+    if (DEFAULT_SINON_CONFIG.hasOwnProperty(prop)) {
+      config[prop] = overrides.hasOwnProperty(prop) ? overrides[prop] : overrides[prop];
+    }
+  }
+
+  return config;
+}
+
 export default function test(testName, callback) {
   let sandbox;
   let wrapper = function () {
@@ -30,7 +51,7 @@ export default function test(testName, callback) {
       context = {};
     }
 
-    let config = sinon.getConfig(sinon.config);
+    let config = getConfig(sinon.config);
     config.injectInto = context;
     sandbox = sinon.sandbox.create(config);
 
