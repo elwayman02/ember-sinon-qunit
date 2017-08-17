@@ -80,7 +80,7 @@ export default function test(testName, callback) {
           testTimeoutDeferred.resolve();
           resolve(data);
         } else {
-          setTimeout(poll, 10, resolve, reject);
+          setTimeout(() => poll(resolve, reject), 10);
         }
       };
 
