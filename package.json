@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.0.0",
-    "ember-sinon": "~0.7.0"
+    "ember-sinon": "~1.0.0"
   },
   "devDependencies": {
     "ember-cli": "2.14.2",
