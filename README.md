@@ -62,6 +62,6 @@ import sinonTest from 'ember-sinon-qunit/test-support/test';
 
 ### Running Tests
 
-* `npm test`
+* `yarn test`
 * `ember test`
 * `ember test --server`

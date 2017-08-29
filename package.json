@@ -23,7 +23,7 @@
     "test": "ember test"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.0.0",
+    "ember-cli-babel": "^6.7.2",
     "ember-sinon": "~1.0.0"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "^2.10.0",
-    "ember-disable-prototype-extensions": "^1.1.0",
+    "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
@@ -48,7 +48,7 @@
     "sinon": "^3.2.1"
   },
   "engines": {
-    "node": ">= 4"
+    "node": "^4.5 || 6.* || >= 7.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
