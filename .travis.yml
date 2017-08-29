@@ -13,9 +13,16 @@ before_install:
   - export PATH=$HOME/.yarn/bin:$PATH
   - yarn global add phantomjs-prebuilt
   - phantomjs --version
+  - yarn global add greenkeeper-lockfile@1
 
 install:
-  - yarn install --no-lockfile
+  - yarn install --no-lockfile --non-interactive
+
+before_script:
+  - greenkeeper-lockfile-update
 
 script:
   - npm test
+
+after_script:
+  - greenkeeper-lockfile-upload
