@@ -58,7 +58,7 @@ import sinonTest from 'ember-sinon-qunit/test-support/test';
 
 * `git clone git@github.com:elwayman02/ember-sinon-qunit.git`
 * `cd ember-sinon-qunit`
-* `npm install`
+* `yarn install`
 
 ### Running Tests
 
