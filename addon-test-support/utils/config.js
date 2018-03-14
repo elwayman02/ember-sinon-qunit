@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import QUnit from 'qunit';
-import { all, defer, Promise, reject, resolve } from 'rsvp';
+import { default as RSVP, all, defer, Promise, reject, resolve } from 'rsvp';
 import { isBlank } from '@ember/utils';
 
 let ALREADY_FAILED = {};
@@ -55,6 +55,7 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
     let config = getConfig(sinon.config);
     config.injectInto = context;
     sandbox = sinon.sandbox.create(config);
+    sandbox.usingPromise(RSVP);
 
     // There are two ways to have an async test:
     // 1. return a thenable
