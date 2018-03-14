@@ -1,4 +1,5 @@
-# Ember-Sinon-QUnit
+Ember Sinon QUnit
+=================
 
 [![Build Status](https://travis-ci.org/elwayman02/ember-sinon-qunit.svg?branch=master)](https://travis-ci.org/elwayman02/ember-sinon-qunit)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-sinon-qunit.svg)](http://emberobserver.com/addons/ember-sinon-qunit)
@@ -17,11 +18,15 @@ via the sandbox will be automatically restored to their original methods at the 
 Ember-Sinon to remove its QUnit specific functionality, making it easier to utilize Ember-Sinon 
 with other addons like [Ember-CLI-Mocha](http://jhawk.co/ember-cli-mocha), for example.
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
-`ember install ember-sinon-qunit`
+```
+ember install ember-sinon-qunit
+```
 
-## Usage
+Usage
+------------------------------------------------------------------------------
 
 Import Ember-Sinon-QUnit's `test` method into your tests in place of Ember-QUnit's test. This creates a Sinon `sandbox`
 around that test via Sinon's `test` API. Then, you can access Sinon's `spy`, `stub`, `mock`, and `sandbox` methods
@@ -52,7 +57,8 @@ import { moduleFor, test } from 'ember-qunit';
 import sinonTest from 'ember-sinon-qunit/test-support/test';
 ```
 
-## Contributing
+Contributing
+------------------------------------------------------------------------------
 
 ### Installation
 
@@ -60,8 +66,25 @@ import sinonTest from 'ember-sinon-qunit/test-support/test';
 * `cd ember-sinon-qunit`
 * `yarn install`
 
-### Running Tests
+### Linting
 
-* `yarn test`
-* `ember test`
-* `ember test --server`
+* `yarn run lint:js`
+* `yarn run lint:js -- --fix`
+
+### Running tests
+
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `yarn test` – Runs `ember try:each` to test your addon against multiple Ember versions
+
+### Running the dummy application
+
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).

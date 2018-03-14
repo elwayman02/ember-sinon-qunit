@@ -1,7 +1,7 @@
-import Ember from 'ember';
 import sinon from 'sinon';
 import QUnit from 'qunit';
-import { isBlank } from 'ember-utils';
+import { all, defer, Promise, reject, resolve } from 'rsvp';
+import { isBlank } from '@ember/utils';
 
 let ALREADY_FAILED = {};
 
@@ -67,7 +67,7 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
     // synchronous. And wait for a thenable `result` to finish first
     // (otherwise an asynchronously invoked `assert.async()` will be
     // ignored).
-    let promise = Ember.RSVP.resolve(result).then(data => {
+    let promise = resolve(result).then(data => {
       // When `assert.async()` is called, the best way found to
       // detect completion (so far) is to poll the semaphore. :(
       // (Esp. for cases where the test timed out.)
@@ -85,7 +85,7 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
         }
       };
 
-      return new Ember.RSVP.Promise(poll);
+      return new Promise(poll);
     });
 
 
@@ -100,18 +100,18 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
         testTimeoutPollerId = setTimeout(testTimeoutPoll, 10);
       }
     };
-    let testTimeoutDeferred = Ember.RSVP.defer();
+    let testTimeoutDeferred = defer();
     // delay first check so that the returned promise can bump the semaphore
     setTimeout(testTimeoutPoll);
 
 
-    return Ember.RSVP.all([promise, testTimeoutDeferred.promise]).then(([data]) => {
+    return all([promise, testTimeoutDeferred.promise]).then(([data]) => {
       sandbox.verifyAndRestore();
       return data;
     }, error => {
       sandbox.restore();
       if (error === ALREADY_FAILED) return;
-      return Ember.RSVP.reject(error);
+      return reject(error);
     });
   };
 
