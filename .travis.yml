@@ -29,7 +29,8 @@ before_script:
   - greenkeeper-lockfile-update
 
 script:
-  - npm test
+  - yarn run lint:js
+  - yarn test
 
 after_script:
   - greenkeeper-lockfile-upload

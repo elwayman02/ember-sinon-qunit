@@ -1,8 +1,4 @@
-import Ember from 'ember';
-
-const {
-  typeOf
-} = Ember;
+import { typeOf } from '@ember/utils';
 
 const obj = {
   foo() {},

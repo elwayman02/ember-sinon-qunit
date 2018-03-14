@@ -1,7 +1,7 @@
 import { module } from 'qunit';
+import { resolve } from 'rsvp';
 import test from 'ember-sinon-qunit/test-support/test';
 import assertSinonInTestContext from '../helpers/assert-sinon-in-test-context';
-import Ember from 'ember';
 
 let fooValue = 42;
 let origMethod;
@@ -43,7 +43,7 @@ test('async with Promise', function (assert) {
   assert.expect(2);
   this.stub(obj, 'method');
 
-  return Ember.RSVP.resolve().then(() => {
+  return resolve().then(() => {
     assert.notEqual(obj.method, origMethod);
   });
 });
@@ -52,7 +52,7 @@ test('async with Promise and assert.async()', function (assert) {
   assert.expect(3);
   this.stub(obj, 'method');
 
-  return Ember.RSVP.resolve().then(() => {
+  return resolve().then(() => {
     assert.notEqual(obj.method, origMethod, 'stub not reset yet');
     const done = assert.async();
     setTimeout(() => {
