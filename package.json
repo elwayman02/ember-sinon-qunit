@@ -50,7 +50,7 @@
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^5.2.1",
     "loader.js": "^4.6.0",
-    "sinon": "^4.4.5"
+    "sinon": "^5.0.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
