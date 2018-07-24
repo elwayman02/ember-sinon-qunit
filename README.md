@@ -75,7 +75,6 @@ Contributing
 
 * `ember test` – Runs the test suite on the current Ember version
 * `ember test --server` – Runs the test suite in "watch mode"
-* `yarn test` – Runs `ember try:each` to test your addon against multiple Ember versions
 
 ### Running the dummy application
 
