@@ -31,13 +31,17 @@ const DEFAULT_SINON_CONFIG = {
   useFakeServer: true
 };
 
+/**
+ * if DEFAULT_SINON_CONFIG has prop that sinon.config has, then add that prop to new map config
+ *
+ * @method getConfig
+ */
 let getConfig = (overrides = {}) => {
   let config = {};
-  let prop;
 
-  for (prop in overrides) {
+  for (let prop in overrides) {
     if (DEFAULT_SINON_CONFIG.hasOwnProperty(prop)) {
-      config[prop] = overrides.hasOwnProperty(prop) ? overrides[prop] : overrides[prop];
+      config[prop] = overrides.hasOwnProperty(prop) ? overrides[prop] : null;
     }
   }
 
