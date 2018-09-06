@@ -58,7 +58,7 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
 
     let config = getConfig(sinon.config);
     config.injectInto = context;
-    sandbox = sinon.sandbox.create(config);
+    sandbox = sinon.createSandbox(config);
     sandbox.usingPromise(RSVP);
 
     // There are two ways to have an async test:
