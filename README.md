@@ -25,6 +25,7 @@ Installation
 ember install ember-sinon-qunit
 ```
 
+
 Usage
 ------------------------------------------------------------------------------
 
@@ -68,8 +69,9 @@ Contributing
 
 ### Linting
 
-* `yarn run lint:js`
-* `yarn run lint:js -- --fix`
+* `yarn lint:hbs`
+* `yarn lint:js`
+* `yarn lint:js --fix`
 
 ### Running tests
 
