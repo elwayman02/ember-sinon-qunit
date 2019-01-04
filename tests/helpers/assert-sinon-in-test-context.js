@@ -41,6 +41,58 @@ export default function assertSinonInTestContext(test) {
     mock.verify();
   });
 
+  test('brings fake() into test context', function (assert) {
+    assert.equal(typeOf(this.fake), 'function', 'fake exists');
+
+    const fake = this.fake.returns('paz');
+    const result = fake();
+
+    assert.ok(fake.calledOnce, 'fake registered the call');
+    assert.equal(result, 'paz');
+  });
+
+  test('brings replace() into test context', function (assert) {
+    assert.equal(typeOf(this.replace), 'function', 'replace exists');
+
+    const stub = this.stub();
+    this.replace(obj, 'baz', stub);
+    obj.baz();
+
+    assert.ok(stub.calledOnce, 'replaced() stub registered call');
+  });
+
+  test('brings replaceGetter() into test context', function (assert) {
+    assert.equal(typeOf(this.replaceGetter), 'function', 'replaceGetter exists');
+
+    const thing = {
+      get y() {
+        return 'yo';
+      }
+    };
+
+    const stub = this.stub().returns('oy');
+    this.replaceGetter(thing, 'y', stub);
+    thing.y;
+
+    assert.ok(stub.calledOnce, 'replacedGetter() stub registered call');
+  });
+
+  test('brings replaceSetter() into test context', function (assert) {
+    assert.equal(typeOf(this.replaceSetter), 'function', 'replaceSetter exists');
+
+    const thing = {
+      set y(val) {
+        //this._y = val;
+      }
+    };
+
+    const stub = this.stub();
+    this.replaceSetter(thing, 'y', stub);
+    thing.y = 1;
+
+    assert.ok(stub.calledOnce, 'replacedSetter() stub registered call');
+  });
+
   test('brings sandbox() into test context', function (assert) {
     assert.equal(typeOf(this.sandbox), 'object', 'sandbox exists');
     assert.equal(this.sandbox.injectInto, this, 'sandbox was injected into context');

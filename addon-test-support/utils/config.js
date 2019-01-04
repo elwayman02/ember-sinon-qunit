@@ -26,7 +26,7 @@ const commonConfig = function() {
 const DEFAULT_SINON_CONFIG = {
   injectIntoThis: true,
   injectInto: null,
-  properties: ["spy", "stub", "mock", "clock", "server", "requests"],
+  properties: ['spy', 'stub', 'mock', 'clock', 'server', 'requests'],
   useFakeTimers: true,
   useFakeServer: true
 };
@@ -46,7 +46,7 @@ let getConfig = (overrides = {}) => {
   }
 
   return config;
-}
+};
 
 let wrapTest = (testName, callback, importedQunitFunc) => {
   let sandbox;
@@ -60,6 +60,13 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
     config.injectInto = context;
     sandbox = sinon.createSandbox(config);
     sandbox.usingPromise(RSVP);
+
+    // Sinon itself only injects the limited number of config properties above.
+    // We have to inject the others ourselves.
+    context.fake = sandbox.fake;
+    context.replace = sandbox.replace;
+    context.replaceGetter = sandbox.replaceGetter;
+    context.replaceSetter = sandbox.replaceSetter;
 
     // There are two ways to have an async test:
     // 1. return a thenable
@@ -126,6 +133,6 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
     sandbox.restore();
     throw exception;
   }
-}
+};
 
 export { wrapTest, commonConfig };

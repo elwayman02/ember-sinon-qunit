@@ -30,23 +30,33 @@ Usage
 ------------------------------------------------------------------------------
 
 Import Ember-Sinon-QUnit's `test` method into your tests in place of Ember-QUnit's test. This creates a Sinon `sandbox`
-around that test via Sinon's `test` API. Then, you can access Sinon's `spy`, `stub`, `mock`, and `sandbox` methods
-via `this` within the test callback:
+around that test via Sinon's `test` API. Then, you can access the following Sinon functions via `this` within the test callback:
+* `spy`, 
+* `stub`, 
+* `mock`, 
+* `fake`,
+* `replace`
+* `replaceGetter`
+* `replaceSetter`
+* `sandbox`
 
 ```javascript
-import { moduleFor } from 'ember-qunit';
+import { module } from 'qunit';
 import test from 'ember-sinon-qunit/test-support/test';
+import { setupTest } from 'ember-qunit';
 
-moduleFor('route:foo', 'Unit | Route | foo');
+module('Unit | Route | foo', function(hooks) {
+  setupTest(hooks);
 
-test('fooTransition action transitions to bar route', function (assert) {
-  const route = this.subject();
-  const stub = this.stub(route, 'transitionTo');
-  
-  route.send('fooTransition');
-  
-  assert.ok(stub.calledOnce, 'transitionTo was called once');
-  assert.ok(stub.calledWithExactly('bar'), 'bar was passed to transitionTo');
+  test('fooTransition action transitions to bar route', function (assert) {
+    let route = this.owner.lookup('route:foo');
+    const stub = this.stub(route, 'transitionTo');
+    
+    route.send('fooTransition');
+    
+    assert.ok(stub.calledOnce, 'transitionTo was called once');
+    assert.ok(stub.calledWithExactly('bar'), 'bar was passed to transitionTo');
+  });
 });
 ```
 
@@ -54,8 +64,9 @@ That's it! You can use this `test` method in place of all Ember-QUnit tests if y
 loss of functionality. Or, you can import them both into the same test to be used only when you need Sinon:
 
 ```javascript
-import { moduleFor, test } from 'ember-qunit';
-import sinonTest from 'ember-sinon-qunit/test-support/test';
+import { module } from 'qunit';
+import test from 'ember-sinon-qunit/test-support/test';
+import { setupTest } from 'ember-qunit';
 ```
 
 Contributing
