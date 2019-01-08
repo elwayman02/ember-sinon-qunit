@@ -5,8 +5,7 @@ import assertSinonInTestContext from '../../helpers/assert-sinon-in-test-context
 const fooValue = 42;
 
 moduleForModel('user', 'Unit | Model | user', {
-  // Specify the other units that are required for this test.
-  needs: [],
+  integration: true,
   beforeEach() {
     this.foo = fooValue;
   }
