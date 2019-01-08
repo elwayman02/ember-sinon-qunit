@@ -5,8 +5,7 @@ import assertSinonInTestContext from '../../helpers/assert-sinon-in-test-context
 const fooValue = 42;
 
 moduleFor('route:application', 'Unit | Route | application', {
-  // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
+  integration: true,
   beforeEach() {
     this.foo = fooValue;
   }
