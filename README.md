@@ -18,6 +18,15 @@ via the sandbox will be automatically restored to their original methods at the 
 Ember-Sinon to remove its QUnit specific functionality, making it easier to utilize Ember-Sinon 
 with other addons like [Ember-CLI-Mocha](http://jhawk.co/ember-cli-mocha), for example.
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v2.18 or above
+* Ember CLI v2.13 or above
+* Node.js v8 or above
+
+
 Installation
 ------------------------------------------------------------------------------
 
@@ -68,6 +77,12 @@ import { module } from 'qunit';
 import test from 'ember-sinon-qunit/test-support/test';
 import { setupTest } from 'ember-qunit';
 ```
+
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
 
 License
 ------------------------------------------------------------------------------
