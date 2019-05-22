@@ -4,7 +4,7 @@ import assertSinonInTestContext from '../../helpers/assert-sinon-in-test-context
 
 const fooValue = 42;
 
-moduleForComponent('video-player', 'Integration | Component | video player', {
+moduleForComponent('video-player', 'Deprecated | Integration | Component | video player', {
   integration: true,
   beforeEach() {
     this.foo = fooValue;

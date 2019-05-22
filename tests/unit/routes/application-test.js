@@ -4,7 +4,7 @@ import assertSinonInTestContext from '../../helpers/assert-sinon-in-test-context
 
 const fooValue = 42;
 
-moduleFor('route:application', 'Unit | Route | application', {
+moduleFor('route:application', 'Deprecated | Unit | Route | application', {
   integration: true,
   beforeEach() {
     this.foo = fooValue;

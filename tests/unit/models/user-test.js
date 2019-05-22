@@ -4,7 +4,7 @@ import assertSinonInTestContext from '../../helpers/assert-sinon-in-test-context
 
 const fooValue = 42;
 
-moduleForModel('user', 'Unit | Model | user', {
+moduleForModel('user', 'Deprecated | Unit | Model | user', {
   integration: true,
   beforeEach() {
     this.foo = fooValue;
