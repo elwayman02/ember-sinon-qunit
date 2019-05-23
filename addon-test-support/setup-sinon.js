@@ -9,7 +9,7 @@ import { createSandbox, restoreSandbox } from './sinon-sandbox';
  * @param {Object} hooks The QUnit hooks object.
  * @public
  */
-export default function setupSinon(hooks) {
+export default function setupSinonRestoration(hooks) {
   hooks.beforeEach(createSandbox);
   hooks.afterEach(restoreSandbox);
 }

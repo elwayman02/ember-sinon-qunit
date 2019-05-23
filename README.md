@@ -52,12 +52,12 @@ to `QUnit.testStart` and `QUnit.testDone` respectively.
 To use, import the setup method from within your test file and execute it.
 
 ```js
-import { setupSinon } from 'ember-sinon-qunit/test-support';
+import { setupSinonRestoration } from 'ember-sinon-qunit/test-support';
 
 ...
 
 module('my module', function(hooks) {
-  setupSinon(hooks);
+  setupSinonRestoration(hooks);
 
   test('my test', function(assert) {
     ...
@@ -72,11 +72,11 @@ This will automatically wire-up `sinon`'s setup & restoration to the module's `b
 To use, import the setup method from within your `tests/test-helper.js` file and execute it.
 
 ```js
-import setupSinon from 'ember-sinon-qunit/test-support/setup-global-sinon';
+import setupSinonGlobalRestoration from 'ember-sinon-qunit/test-support/setup-global-sinon';
 
 ...
 
-setupSinon();
+setupSinonGlobalRestoration();
 ```
 
 This will automatically wire-up `sinon`'s setup & restoration to QUnit `testStart` and `testDone` respectively.
@@ -110,12 +110,12 @@ Below, you will find simple instructions for migrating from each of these featur
 
 ### Migration from `sinon` 5+
 
-1. Import and consume `setupSinon` for the [Hooks API](#qunit-hooks-api) or [Classic API](#classic-api).
+1. Import and consume `setupSinonRestoration`/`setupSinonGlobalRestoration` for the [Hooks API](#qunit-hooks-api) or [Classic API](#classic-api).
 1. Remove any manual calls to `sinon.restore()`. It won't hurt to leave them, but they are redundant now!
 
 ### Migration from older versions of `sinon`
 
-1. Import and consume `setupSinon` for the [Hooks API](#qunit-hooks-api) or [Classic API](#classic-api).
+1. Import and consume `setupSinonRestoration`/`setupSinonGlobalRestoration` for the [Hooks API](#qunit-hooks-api) or [Classic API](#classic-api).
 1. Remove calls to `sinon.createSandbox()`. Anywhere you used the `sandbox` object returned by this method, 
 you can now use `sinon` directly. See the [`sinon` Migration Guide](https://sinonjs.org/guides/migrating-to-5.0) 
 for more information.
@@ -125,14 +125,14 @@ for more information.
 
 1. Revert to using the standard [`ember-qunit`](https://github.com/emberjs/ember-qunit) test import: 
 `import { test } from 'qunit';`
-1. Import and consume `setupSinon` for the [Hooks API](#qunit-hooks-api) or [Classic API](#classic-api).
+1. Import and consume `setupSinonRestoration`/`setupSinonGlobalRestoration` for the [Hooks API](#qunit-hooks-api) or [Classic API](#classic-api).
 
 ### Migration from `ember-sinon-sinoff` or `ember-sinon-sandbox`
 
 1. `import sinon from 'sinon';` within each test that currently uses a `sandbox`.
 1. Replace `this.sandbox` with the imported `sinon` object.
-1. Rename `setupSinonSinoff`/`setupSinonSandbox` to `setupSinon`.
-1. Import `setupSinon` for the [Hooks API](#qunit-hooks-api) or [Classic API](#classic-api).
+1. Rename `setupSinonSinoff`/`setupSinonSandbox` to `setupSinonRestoration` (or `setupSinonGlobalRestoration` for global setup).
+1. Import `setupSinonRestoration`/`setupSinonGlobalRestoration` for the [Hooks API](#qunit-hooks-api) or [Classic API](#classic-api).
 
 Deprecated Features
 ------------------------------------------------------------------------------

@@ -8,7 +8,7 @@ import { createSandbox, restoreSandbox } from './sinon-sandbox';
  * @param {Object} An object containing optional options
  * @public
  */
-export default function setupSinon(testEnvironment = self.QUnit) {
+export default function setupSinonGlobalRestoration(testEnvironment = self.QUnit) {
   testEnvironment.testStart(createSandbox);
   testEnvironment.testDone(restoreSandbox);
 }

@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
-import setupSinon from 'ember-sinon-qunit/test-support/setup-sinon';
+import setupSinonRestoration from 'ember-sinon-qunit/test-support/setup-sinon';
 import {
   createSandbox,
   restoreSandbox,
@@ -24,7 +24,7 @@ module('Unit | ember-sinon-qunit | Setup using hooks', function(hooks) {
       assert.equal(callback, restoreSandbox);
     };
 
-    setupSinon(hooks);
+    setupSinonRestoration(hooks);
 
     hooks.beforeEach = oldBeforeEach;
     hooks.afterEach = oldAfterEach;
