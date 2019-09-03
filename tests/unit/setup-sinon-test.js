@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import setupSinonGlobalRestoration from 'ember-sinon-qunit/test-support/setup-global-sinon';
+import setupSinon from 'ember-sinon-qunit/test-support/setup-sinon';
 import {
   createSandbox,
   restoreSandbox,
@@ -24,7 +24,7 @@ module('Unit | ember-sinon-qunit | Setup in testStart/testDone', function() {
       },
     };
 
-    setupSinonGlobalRestoration(qunit);
+    setupSinon(qunit);
 
     assert.ok(testStartCalled, 'testEnvironment.testStart is called');
     assert.ok(testDoneCalled, 'testEnvironment.testDone is called');

@@ -1,15 +1,14 @@
 import { createSandbox, restoreSandbox } from './sinon-sandbox';
 
 /**
- * Allows for creating and restoring a sinon sandbox per test. Uses the *new*
- * QUnit module API to configure the sandbox on `beforeEach` and `afterEach` of
- * the test module.
+ * Allows for creating and restoring a global sinon sandbox per test. This is
+ * done via the `QUnit.testStart` and `QUnit.testDone` methods.
  *
  * @export
- * @param {Object} hooks The QUnit hooks object.
+ * @param {Object} An object containing optional options
  * @public
  */
-export default function setupSinonRestoration(hooks) {
-  hooks.beforeEach(createSandbox);
-  hooks.afterEach(restoreSandbox);
+export default function setupSinonGlobalRestoration(testEnvironment = self.QUnit) {
+  testEnvironment.testStart(createSandbox);
+  testEnvironment.testDone(restoreSandbox);
 }

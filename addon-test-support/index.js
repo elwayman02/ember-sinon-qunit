@@ -1,1 +1,1 @@
-export { default as setupSinonRestoration } from './setup-sinon';
+export { default as setupSinon } from './setup-sinon';
