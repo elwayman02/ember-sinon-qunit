@@ -16,7 +16,7 @@ module.exports = {
       annotation: `Addon#treeForTestSupport (${this.name})`,
     });
 
-    return this.preprocessJs(tree, '/', this.name, {
+    return this.preprocessJs(namespacedTree, '/', this.name, {
       registry: this.registry,
     });
   },
