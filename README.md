@@ -110,7 +110,7 @@ Deprecated Features
 
 *Note: The following features are **deprecated** and should not be used, as they will be removed in a future major release.*
 
-Import `ember-sinon-qunit`'s `test` method into your tests in place of Ember-QUnit's test. This creates a `sinon` `sandbox`
+Import `ember-sinon-qunit`'s `test` method into your tests in place of `ember-qunit`'s test. This creates a `sinon` `sandbox`
 around that test via `sinon`'s `test` API. Then, you can access the following `sinon` functions via `this` within the test callback:
 * `spy`, 
 * `stub`, 
