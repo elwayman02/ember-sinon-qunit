@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import setupSinon from 'ember-sinon-qunit/test-support/setup-sinon';
+import setupSinon from 'ember-sinon-qunit/test-support/index';
 import {
   createSandbox,
   restoreSandbox,
