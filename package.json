@@ -9,7 +9,10 @@
   ],
   "repository": "https://github.com/elwayman02/ember-sinon-qunit",
   "license": "MIT",
-  "author": "Jordan Hawker <hawker.jordan@gmail.com> (http://www.JordanHawker.com)",
+  "contributors": [
+    "Jordan Hawker <hawker.jordan@gmail.com> (http://www.JordanHawker.com)",
+    "Steve Calvert <steve.calvert@gmail.com>"
+  ],
   "directories": {
     "doc": "doc",
     "test": "tests"
