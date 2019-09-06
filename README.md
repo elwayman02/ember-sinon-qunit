@@ -43,16 +43,22 @@ Usage
 To use, import the setup method into your `tests/test-helper.js` file and execute it.
 
 ```js
+import { setApplication } from '@ember/test-helpers'; 
+import { start } from 'ember-qunit'; 
+import Application from '../app'; 
+import config from '../config/environment'; 
 import setupSinon from 'ember-sinon-qunit';
-
-...
-
+ 
+setApplication(Application.create(config.APP)); 
+ 
 setupSinon();
+ 
+start(); 
 ```
 
-This will automatically wire-up `sinon`'s setup & restoration to QUnit `testStart` and `testDone` respectively.
+This will automatically wire-up `sinon`'s setup & restoration to QUnit's `testStart` and `testDone` respectively.
 
-#### Accessing `sinon` from Within Tests
+#### Accessing `sinon` Within Tests
 
 In each test you are able to access `sinon` via the `sinon` object available as an import in your tests:
 
