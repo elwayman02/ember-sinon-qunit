@@ -6,7 +6,7 @@ import assertSinonInTestContext from '../../tests/helpers/assert-sinon-in-test-c
 
 const fooValue = 42;
 
-module('Acceptance | application', function (hooks) {
+module('Deprecated | Acceptance | application', function (hooks) {
   setupApplicationTest(hooks);
 
   hooks.beforeEach(function () {

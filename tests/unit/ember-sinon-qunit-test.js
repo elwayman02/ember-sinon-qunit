@@ -7,7 +7,7 @@ let fooValue = 42;
 let origMethod;
 let obj;
 
-module('Unit | ember-sinon-qunit', {
+module('Deprecated | Unit | ember-sinon-qunit', {
   beforeEach() {
     this.foo = fooValue;
 
