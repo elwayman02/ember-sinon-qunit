@@ -80,6 +80,9 @@ safely create mocks for your tests without worrying about any overrides leaking 
 Migrating To `ember-sinon-qunit`
 ------------------------------------------------------------------------------
 
+| Read this [post](https://www.jordanhawker.com/p/187541610821) to learn more about the overhaul of this package. |
+| --- |
+
 The above functionality replaces previous features within `ember-sinon-qunit`, 
 as well as the sister addons [`ember-sinon-sinoff`](https://github.com/scalvert/ember-sinon-sinoff) 
 and [`ember-sinon-sandbox`](https://github.com/scalvert/ember-sinon-sandbox). 
