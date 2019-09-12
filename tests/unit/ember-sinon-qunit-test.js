@@ -2,6 +2,8 @@ import { module } from 'qunit';
 import { resolve } from 'rsvp';
 import test from 'ember-sinon-qunit/test-support/test';
 import assertSinonInTestContext from '../helpers/assert-sinon-in-test-context';
+import Ember from 'ember';
+import sinon from 'sinon';
 
 let fooValue = 42;
 let origMethod;
@@ -24,9 +26,20 @@ module('Deprecated | Unit | ember-sinon-qunit', {
 
 assertSinonInTestContext(test);
 
+const deprecateStub = sinon.stub(Ember, 'deprecate').callsFake(function (unused, deprecateTest) {
+  if (deprecateTest !== false) {
+    throw new Error('Ember.deprecate should be called with 2nd argument `false`');
+  }
+});
+
 test('does not destroy context from beforeEach', function (assert) {
   assert.equal(this.foo, fooValue);
 });
+
+if (!deprecateStub.called) {
+  throw new Error('Ember.deprecate should be called');
+}
+deprecateStub.restore();
 
 test('async with assert.async()', function (assert) {
   assert.expect(2);
