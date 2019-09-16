@@ -6,8 +6,10 @@ import { wrapTest, commonConfig } from './utils/config';
 commonConfig();
 
 export default function test(testName, callback) {
-  deprecate('This pattern is now deprecated. Please import the `setupSinon` method instead.', {
-    id: 'ember-sinon-qunit.test'
+  deprecate('This pattern is now deprecated. Please import the `setupSinon` method instead.', false, {
+    id: 'ember-sinon-qunit.test',
+    until: '5.0.0',
+    url: 'https://github.com/elwayman02/ember-sinon-qunit#migration-from-older-versions-of-ember-sinon-qunit'
   });
   wrapTest(testName, callback, emberQUnitTest);
 }
