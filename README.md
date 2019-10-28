@@ -63,14 +63,24 @@ This will automatically wire-up `sinon`'s setup & restoration to QUnit's `testSt
 In each test you are able to access `sinon` via the `sinon` object available as an import in your tests:
 
 ```js
+import { module } from 'qunit';
+import { test } from 'ember-qunit';
 import sinon from 'sinon';
 
-...
+module('Example test', function(hooks) {
+  hooks.beforeEach(function() {
+    this.testStub = sinon.stub();
+  });
 
-test('very important test happening here', function(assert) {
-  const spy = sinon.spy();
+  test('sinon is wired up correctly', function(assert) {
+    this.testStub();
 
-  ...
+    assert.ok(this.testStub.calledOnce, 'stub was called once');
+  });
+
+  test('sinon state restored after every test run', function(assert) {
+    assert.ok(this.testStub.notCalled, 'stub cleaned up after each test run');
+  });
 });
 ```
 
