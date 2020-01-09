@@ -732,6 +732,11 @@
   resolved "https://registry.yarnpkg.com/@ember-data/rfc395-data/-/rfc395-data-0.0.4.tgz#ecb86efdf5d7733a76ff14ea651a1b0ed1f8a843"
   integrity sha512-tGRdvgC9/QMQSuSuJV45xoyhI0Pzjm7A9o/MVVA3HakXIImJbbzx/k/6dO9CUEQXIyS2y0fW6C1XaYOG7rY0FQ==
 
+"@ember/edition-utils@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@ember/edition-utils/-/edition-utils-1.2.0.tgz#a039f542dc14c8e8299c81cd5abba95e2459cfa6"
+  integrity sha512-VmVq/8saCaPdesQmftPqbFtxJWrzxNGSQ+e8x8LLe3Hjm36pJ04Q8LeORGZkAeOhldoUX9seLGmSaHeXkIqoog==
+
 "@ember/optional-features@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@ember/optional-features/-/optional-features-0.7.0.tgz#f65a858007020ddfb8342f586112750c32abd2d9"
@@ -1567,6 +1572,11 @@ babel-plugin-htmlbars-inline-precompile@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-htmlbars-inline-precompile/-/babel-plugin-htmlbars-inline-precompile-2.0.0.tgz#e08e0107468637f93625d159d3670dc19cf55e4f"
   integrity sha512-08vtZNHseQ+uxN5DxK0ca1Qs1MWqzieuWF+pYkEzFohF+WxVNLiM1FN6ss5YP3BrigE68sI/yFrbJlO0bSb1XA==
+
+babel-plugin-htmlbars-inline-precompile@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-htmlbars-inline-precompile/-/babel-plugin-htmlbars-inline-precompile-3.0.1.tgz#e1e38a4087f446578e419a21c112530c8df02345"
+  integrity sha512-ZiFY0nQjtdMPGIDwp/5LYOs6rCr54QfcSV5nPbrA7C++Fv4Vb2Q/qrKYx78t+dwmARJztnOBlObFk4z8veHxNA==
 
 babel-plugin-module-resolver@^3.1.1:
   version "3.1.1"
@@ -2522,6 +2532,11 @@ broccoli-module-unification-reexporter@^1.0.0:
     mkdirp "^0.5.1"
     walk-sync "^0.3.2"
 
+broccoli-node-api@^1.6.0, broccoli-node-api@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/broccoli-node-api/-/broccoli-node-api-1.7.0.tgz#391aa6edecd2a42c63c111b4162956b2fa288cb6"
+  integrity sha512-QIqLSVJWJUVOhclmkmypJJH9u9s/aWH4+FH6Q6Ju5l+Io4dtwqdPUNmDfw40o6sxhbZHhqGujDJuHTML1wG8Yw==
+
 broccoli-node-info@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/broccoli-node-info/-/broccoli-node-info-1.1.0.tgz#3aa2e31e07e5bdb516dd25214f7c45ba1c459412"
@@ -2530,6 +2545,13 @@ broccoli-node-info@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/broccoli-node-info/-/broccoli-node-info-2.1.0.tgz#ca84560e8570ff78565bea1699866ddbf58ad644"
   integrity sha512-l6qDuboJThHfRVVWQVaTs++bFdrFTP0gJXgsWenczc1PavRVUmL1Eyb2swTAXXMpDOnr2zhNOBLx4w9AxkqbPQ==
+
+broccoli-output-wrapper@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/broccoli-output-wrapper/-/broccoli-output-wrapper-2.0.0.tgz#f1e0b9b2f259a67fd41a380141c3c20b096828e6"
+  integrity sha512-V/ozejo+snzNf75i/a6iTmp71k+rlvqjE3+jYfimuMwR1tjNNRdtfno+NGNQB2An9bIAeqZnKhMDurAznHAdtA==
+  dependencies:
+    heimdalljs-logger "^0.1.10"
 
 broccoli-persistent-filter@^1.1.6, broccoli-persistent-filter@^1.4.0, broccoli-persistent-filter@^1.4.3:
   version "1.4.3"
@@ -2587,6 +2609,26 @@ broccoli-persistent-filter@^2.1.1, broccoli-persistent-filter@^2.2.1:
     symlink-or-copy "^1.0.1"
     walk-sync "^1.0.0"
 
+broccoli-persistent-filter@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/broccoli-persistent-filter/-/broccoli-persistent-filter-2.3.1.tgz#4a052e0e0868b344c3a2977e35a3d497aa9eca72"
+  integrity sha512-hVsmIgCDrl2NFM+3Gs4Cr2TA6UPaIZip99hN8mtkaUPgM8UeVnCbxelCvBjUBHo0oaaqP5jzqqnRVvb568Yu5g==
+  dependencies:
+    async-disk-cache "^1.2.1"
+    async-promise-queue "^1.0.3"
+    broccoli-plugin "^1.0.0"
+    fs-tree-diff "^2.0.0"
+    hash-for-dep "^1.5.0"
+    heimdalljs "^0.2.1"
+    heimdalljs-logger "^0.1.7"
+    mkdirp "^0.5.1"
+    promise-map-series "^0.2.1"
+    rimraf "^2.6.1"
+    rsvp "^4.7.0"
+    symlink-or-copy "^1.0.1"
+    sync-disk-cache "^1.3.3"
+    walk-sync "^1.0.0"
+
 broccoli-plugin@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/broccoli-plugin/-/broccoli-plugin-1.1.0.tgz#73e2cfa05f8ea1e3fc1420c40c3d9e7dc724bf02"
@@ -2610,6 +2652,19 @@ broccoli-plugin@^1.1.0, broccoli-plugin@^1.3.1:
   resolved "https://registry.yarnpkg.com/broccoli-plugin/-/broccoli-plugin-1.3.1.tgz#a26315732fb99ed2d9fb58f12a1e14e986b4fabd"
   integrity sha512-DW8XASZkmorp+q7J4EeDEZz+LoyKLAd2XZULXyD9l4m9/hAKV3vjHmB1kiUshcWAYMgTP1m2i4NnqCE/23h6AQ==
   dependencies:
+    promise-map-series "^0.2.1"
+    quick-temp "^0.1.3"
+    rimraf "^2.3.4"
+    symlink-or-copy "^1.1.8"
+
+broccoli-plugin@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/broccoli-plugin/-/broccoli-plugin-3.1.0.tgz#54ba6dd90a42ec3db5624063292610e326b1e542"
+  integrity sha512-7w7FP8WJYjLvb0eaw27LO678TGGaom++49O1VYIuzjhXjK5kn2+AMlDm7CaUFw4F7CLGoVQeZ84d8gICMJa4lA==
+  dependencies:
+    broccoli-node-api "^1.6.0"
+    broccoli-output-wrapper "^2.0.0"
+    fs-merger "^3.0.1"
     promise-map-series "^0.2.1"
     quick-temp "^0.1.3"
     rimraf "^2.3.4"
@@ -3177,6 +3232,11 @@ common-tags@^1.4.0:
   resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.7.2.tgz#24d9768c63d253a56ecff93845b44b4df1d52771"
   dependencies:
     babel-runtime "^6.26.0"
+
+common-tags@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
+  integrity sha512-6P6g0uetGpW/sdyUy/iQQCbFF0kWVMSIVSyYz7Zgjcgh8mgw8PQzDNZeyZ5DQ2gM7LBoZPHmnjz8rUthkBG5tw==
 
 component-bind@1.0.0:
   version "1.0.0"
@@ -3792,15 +3852,25 @@ ember-cli-htmlbars-inline-precompile@^3.0.0:
     heimdalljs-logger "^0.1.9"
     silent-error "^1.1.0"
 
-ember-cli-htmlbars@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-3.0.1.tgz#01e21f0fd05e0a6489154f26614b1041769e3e58"
-  integrity sha512-pyyB2s52vKTXDC5svU3IjU7GRLg2+5O81o9Ui0ZSiBS14US/bZl46H2dwcdSJAK+T+Za36ZkQM9eh1rNwOxfoA==
+ember-cli-htmlbars@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-4.2.1.tgz#c74c5deba6025c8e80d84289a88901073e1ca1f7"
+  integrity sha512-jZ9LYO4R6ieYC5Bcei4RWbK2/SY0LDQ5cUIyt9YQpN/VU7A9G+es9w7FJYfHtDD+TxvaXDKMuXAeBwOz+mZKPA==
   dependencies:
-    broccoli-persistent-filter "^1.4.3"
-    hash-for-dep "^1.2.3"
-    json-stable-stringify "^1.0.0"
-    strip-bom "^3.0.0"
+    "@ember/edition-utils" "^1.2.0"
+    babel-plugin-htmlbars-inline-precompile "^3.0.1"
+    broccoli-debug "^0.6.5"
+    broccoli-persistent-filter "^2.3.1"
+    broccoli-plugin "^3.1.0"
+    common-tags "^1.8.0"
+    ember-cli-babel-plugin-helpers "^1.1.0"
+    fs-tree-diff "^2.0.1"
+    hash-for-dep "^1.5.1"
+    heimdalljs-logger "^0.1.10"
+    json-stable-stringify "^1.0.1"
+    semver "^7.0.0"
+    strip-bom "^4.0.0"
+    walk-sync "^2.0.2"
 
 ember-cli-inject-live-reload@^2.0.1:
   version "2.0.1"
@@ -5129,6 +5199,27 @@ fs-extra@^7.0.1:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^8.0.1:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
+  integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
+fs-merger@^3.0.1:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/fs-merger/-/fs-merger-3.0.2.tgz#bf111334b89b8d65b95580d33c587dc79620a4e3"
+  integrity sha512-63wmgjPDClP5XcTSKdIXz66X5paYy/m2Ymq5c5YpGxRQEk1HFZ8rtti3LMNSOSw1ketbBMGbSFFcQeEnpnzDpQ==
+  dependencies:
+    broccoli-node-api "^1.7.0"
+    broccoli-node-info "^2.1.0"
+    fs-extra "^8.0.1"
+    fs-tree-diff "^2.0.1"
+    rimraf "^2.6.3"
+    walk-sync "^2.0.2"
+
 fs-tree-diff@^0.5.2, fs-tree-diff@^0.5.3, fs-tree-diff@^0.5.4, fs-tree-diff@^0.5.6:
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/fs-tree-diff/-/fs-tree-diff-0.5.6.tgz#342665749e8dca406800b672268c8f5073f3e623"
@@ -5543,6 +5634,11 @@ got@^8.0.1:
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
+
+graceful-fs@^4.2.0:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
+  integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
 graceful-fs@~4.1.2:
   version "4.1.15"
@@ -9133,6 +9229,11 @@ semver@^6.1.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
+semver@^7.0.0:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.1.1.tgz#29104598a197d6cbe4733eeecbe968f7b43a9667"
+  integrity sha512-WfuG+fl6eh3eZ2qAf6goB7nhiCd7NPXhmyFxigB/TOkQyeLP8w8GsVehvtGNtnNmyboz4TgeK40B1Kbql/8c5A==
+
 semver@~5.1.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.1.1.tgz#a3292a373e6f3e0798da0b20641b9a9c5bc47e19"
@@ -9658,6 +9759,11 @@ strip-bom@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
 
+strip-bom@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-4.0.0.tgz#9c3505c1db45bcedca3d9cf7a16f5c5aa3901878"
+  integrity sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==
+
 strip-eof@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/strip-eof/-/strip-eof-1.0.0.tgz#bb43ff5598a6eb05d89b59fcd129c983313606bf"
@@ -9710,6 +9816,17 @@ symlink-or-copy@^1.0.0, symlink-or-copy@^1.0.1, symlink-or-copy@^1.1.8:
 symlink-or-copy@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symlink-or-copy/-/symlink-or-copy-1.2.0.tgz#5d49108e2ab824a34069b68974486c290020b393"
+
+sync-disk-cache@^1.3.3:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/sync-disk-cache/-/sync-disk-cache-1.3.4.tgz#53a2c5a09d8f4bb53160bce182a456ad71574024"
+  integrity sha512-GlkGeM81GPPEKz/lH7QUTbvqLq7K/IUTuaKDSMulP9XQ42glqNJIN/RKgSOw4y8vxL1gOVvj+W7ruEO4s36eCw==
+  dependencies:
+    debug "^2.1.3"
+    heimdalljs "^0.2.3"
+    mkdirp "^0.5.0"
+    rimraf "^2.2.8"
+    username-sync "^1.0.2"
 
 table@^5.0.2:
   version "5.1.1"
@@ -10162,6 +10279,11 @@ username-sync@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/username-sync/-/username-sync-1.0.1.tgz#1cde87eefcf94b8822984d938ba2b797426dae1f"
 
+username-sync@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/username-sync/-/username-sync-1.0.2.tgz#0a3697909fb7b5768d29e2921f573acfdd427592"
+  integrity sha512-ayNkOJdoNSGNDBE46Nkc+l6IXmeugbzahZLSMkwvgRWv5y5ZqNY2IrzcgmkR4z32sj1W3tM3TuTUMqkqBzO+RA==
+
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
@@ -10256,6 +10378,15 @@ walk-sync@^1.0.0, walk-sync@^1.1.3:
     "@types/minimatch" "^3.0.3"
     ensure-posix-path "^1.1.0"
     matcher-collection "^1.1.1"
+
+walk-sync@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/walk-sync/-/walk-sync-2.0.2.tgz#5ea8a28377c8be68c92d50f4007ea381725da14b"
+  integrity sha512-dCZkrxfHjPn7tIvdYrX3uMD/R0beVrHpA8lROQ5wWrl8psJgR6xwCkwqTFes0dNujbS2o/ITpvSYgIFsLsf13A==
+  dependencies:
+    "@types/minimatch" "^3.0.3"
+    ensure-posix-path "^1.1.0"
+    matcher-collection "^2.0.0"
 
 walker@~1.0.5:
   version "1.0.7"
