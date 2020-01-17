@@ -124,6 +124,13 @@ for more information.
 1. Remove references to `setupSinonSinoff`/`setupSinonSandbox` from your tests.
 1. Import and consume `setupSinon`.
 
+Or, if you'd like to save some effort, try the following codemod [`ember-sinon-qunit-codemod`](https://github.com/sunwrobert/ember-sinon-qunit-codemod): 
+
+```bash
+cd my-ember-app-or-addon
+npx ember-sinon-qunit-codemod tests
+```
+
 Deprecated Features
 ------------------------------------------------------------------------------
 
