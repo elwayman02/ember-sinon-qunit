@@ -87,6 +87,26 @@ module('Example test', function(hooks) {
 The `sinon` object's state is automatically self-contained to each specific test, allowing you to 
 safely create mocks for your tests without worrying about any overrides leaking between each test.
 
+#### Using sinon with the `@action` decorator
+
+The `@action` decorator is used with methods to bind them to the `this` of the class. The `@action`
+does this by wrapping the method in a property with the `getter` of the property returning the
+original method bound to `this`. That means when you wish to stub or spy the method, you have to treat it as a
+property not a method.
+
+```js
+let stubAction = sinon.stub(service, "methodToStub").get(
+    function() { 
+        return null; 
+    }
+);
+
+let spyAction = sinon.spy(service, "methodToStub", ["get"]);
+
+assert.ok(stubAction.get.calledOnce);
+assert.ok(spyAction.get.calledOnce);
+```
+
 Migrating To `ember-sinon-qunit`
 ------------------------------------------------------------------------------
 
