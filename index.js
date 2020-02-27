@@ -12,7 +12,7 @@ module.exports = {
 
     let namespacedTree = new Funnel(tree, {
       srcDir: '/',
-      destDir: `/${this.moduleName()}`,
+      destDir: `${this.moduleName()}`,
       annotation: `Addon#treeForTestSupport (${this.name})`,
     });
 
