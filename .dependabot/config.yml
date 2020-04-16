@@ -11,4 +11,4 @@ update_configs:
           update_type: "all"
     version_requirement_updates: "increase_versions"
     commit_message:
-      prefix: "[skip ci]"
+      prefix: "[skip netlify]"
