@@ -62,7 +62,7 @@
     "eslint-plugin-node": "^11.0.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^1.6.0",
-    "sinon": "^9.2.1"
+    "sinon": "^9.2.2"
   },
   "engines": {
     "node": "10.* || >= 12"
