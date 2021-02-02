@@ -1,4 +1,4 @@
-import { deprecate } from '@ember/debug';
+import { deprecate } from '@ember/application/deprecations';
 import { test as emberQUnitTest } from 'ember-qunit';
 import { wrapTest, commonConfig } from './utils/config';
 
