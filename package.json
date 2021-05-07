@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
+    "lint": "yarn lint:js && yarn lint:hbs",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
