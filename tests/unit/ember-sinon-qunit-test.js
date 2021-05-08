@@ -9,72 +9,72 @@ let fooValue = 42;
 let origMethod;
 let obj;
 
-module('Deprecated | Unit | ember-sinon-qunit', {
-  beforeEach() {
+module('Deprecated | Unit | ember-sinon-qunit', function (hooks) {
+  hooks.beforeEach(function () {
     this.foo = fooValue;
 
     origMethod = () => {};
     obj = {
       method: origMethod,
     };
-  },
+  });
 
-  afterEach(assert) {
+  hooks.afterEach(function (assert) {
     assert.equal(obj.method, origMethod, 'stub was reset');
-  },
-});
-
-assertSinonInTestContext(test);
-
-const deprecateStub = sinon
-  .stub(Ember, 'deprecate')
-  .callsFake(function (unused, deprecateTest) {
-    if (deprecateTest !== false) {
-      throw new Error(
-        'Ember.deprecate should be called with 2nd argument `false`'
-      );
-    }
   });
 
-test('does not destroy context from beforeEach', function (assert) {
-  assert.equal(this.foo, fooValue);
-});
+  assertSinonInTestContext(test);
 
-if (!deprecateStub.called) {
-  throw new Error('Ember.deprecate should be called');
-}
-deprecateStub.restore();
+  const deprecateStub = sinon
+    .stub(Ember, 'deprecate')
+    .callsFake(function (unused, deprecateTest) {
+      if (deprecateTest !== false) {
+        throw new Error(
+          'Ember.deprecate should be called with 2nd argument `false`'
+        );
+      }
+    });
 
-test('async with assert.async()', function (assert) {
-  assert.expect(2);
-  this.stub(obj, 'method');
-
-  const done = assert.async();
-  setTimeout(() => {
-    assert.notEqual(obj.method, origMethod, 'stub not reset yet');
-    done();
+  test('does not destroy context from beforeEach', function (assert) {
+    assert.equal(this.foo, fooValue);
   });
-});
 
-test('async with Promise', function (assert) {
-  assert.expect(2);
-  this.stub(obj, 'method');
+  if (!deprecateStub.called) {
+    throw new Error('Ember.deprecate should be called');
+  }
+  deprecateStub.restore();
 
-  return resolve().then(() => {
-    assert.notEqual(obj.method, origMethod);
-  });
-});
+  test('async with assert.async()', function (assert) {
+    assert.expect(2);
+    this.stub(obj, 'method');
 
-test('async with Promise and assert.async()', function (assert) {
-  assert.expect(3);
-  this.stub(obj, 'method');
-
-  return resolve().then(() => {
-    assert.notEqual(obj.method, origMethod, 'stub not reset yet');
     const done = assert.async();
     setTimeout(() => {
       assert.notEqual(obj.method, origMethod, 'stub not reset yet');
       done();
+    });
+  });
+
+  test('async with Promise', function (assert) {
+    assert.expect(2);
+    this.stub(obj, 'method');
+
+    return resolve().then(() => {
+      assert.notEqual(obj.method, origMethod);
+    });
+  });
+
+  test('async with Promise and assert.async()', function (assert) {
+    assert.expect(3);
+    this.stub(obj, 'method');
+
+    return resolve().then(() => {
+      assert.notEqual(obj.method, origMethod, 'stub not reset yet');
+      const done = assert.async();
+      setTimeout(() => {
+        assert.notEqual(obj.method, origMethod, 'stub not reset yet');
+        done();
+      });
     });
   });
 });
