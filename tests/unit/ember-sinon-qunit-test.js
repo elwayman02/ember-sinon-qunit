@@ -15,22 +15,26 @@ module('Deprecated | Unit | ember-sinon-qunit', {
 
     origMethod = () => {};
     obj = {
-      method: origMethod
+      method: origMethod,
     };
   },
 
   afterEach(assert) {
     assert.equal(obj.method, origMethod, 'stub was reset');
-  }
+  },
 });
 
 assertSinonInTestContext(test);
 
-const deprecateStub = sinon.stub(Ember, 'deprecate').callsFake(function (unused, deprecateTest) {
-  if (deprecateTest !== false) {
-    throw new Error('Ember.deprecate should be called with 2nd argument `false`');
-  }
-});
+const deprecateStub = sinon
+  .stub(Ember, 'deprecate')
+  .callsFake(function (unused, deprecateTest) {
+    if (deprecateTest !== false) {
+      throw new Error(
+        'Ember.deprecate should be called with 2nd argument `false`'
+      );
+    }
+  });
 
 test('does not destroy context from beforeEach', function (assert) {
   assert.equal(this.foo, fooValue);

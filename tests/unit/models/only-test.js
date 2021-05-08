@@ -4,6 +4,6 @@ import only from 'ember-sinon-qunit/test-support/only';
 
 module('Deprecated | Unit | Utils | only');
 
-test('can import only', function(assert) {
+test('can import only', function (assert) {
   assert.equal(typeof only, 'function', 'can import `only');
 });

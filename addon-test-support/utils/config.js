@@ -5,7 +5,7 @@ import { isBlank } from '@ember/utils';
 
 let ALREADY_FAILED = {};
 
-const commonConfig = function() {
+const commonConfig = function () {
   sinon.expectation.fail = sinon.assert.fail = function (msg) {
     QUnit.assert.ok(false, msg);
   };
@@ -19,7 +19,7 @@ const commonConfig = function() {
     injectInto: null,
     properties: ['spy', 'stub', 'mock', 'sandbox'],
     useFakeTimers: false,
-    useFakeServer: false
+    useFakeServer: false,
   };
 };
 
@@ -28,7 +28,7 @@ const DEFAULT_SINON_CONFIG = {
   injectInto: null,
   properties: ['spy', 'stub', 'mock', 'clock', 'server', 'requests'],
   useFakeTimers: true,
-  useFakeServer: true
+  useFakeServer: true,
 };
 
 /**
@@ -40,8 +40,10 @@ let getConfig = (overrides = {}) => {
   let config = {};
 
   for (let prop in overrides) {
-    if (DEFAULT_SINON_CONFIG.hasOwnProperty(prop)) {
-      config[prop] = overrides.hasOwnProperty(prop) ? overrides[prop] : null;
+    if (Object.prototype.hasOwnProperty.call(DEFAULT_SINON_CONFIG, prop)) {
+      config[prop] = Object.prototype.hasOwnProperty.call(overrides, prop)
+        ? overrides[prop]
+        : null;
     }
   }
 
@@ -79,7 +81,7 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
     // synchronous. And wait for a thenable `result` to finish first
     // (otherwise an asynchronously invoked `assert.async()` will be
     // ignored).
-    let promise = resolve(result).then(data => {
+    let promise = resolve(result).then((data) => {
       // When `assert.async()` is called, the best way found to
       // detect completion (so far) is to poll the semaphore. :(
       // (Esp. for cases where the test timed out.)
@@ -100,7 +102,6 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
       return new Promise(poll);
     });
 
-
     // Watch for cases where either the `result` thenable
     // or `assert.async()` times out and ensure cleanup.
     let testTimeoutPollerId = 0;
@@ -116,15 +117,17 @@ let wrapTest = (testName, callback, importedQunitFunc) => {
     // delay first check so that the returned promise can bump the semaphore
     setTimeout(testTimeoutPoll);
 
-
-    return all([promise, testTimeoutDeferred.promise]).then(([data]) => {
-      sandbox.verifyAndRestore();
-      return data;
-    }, error => {
-      sandbox.restore();
-      if (error === ALREADY_FAILED) return;
-      return reject(error);
-    });
+    return all([promise, testTimeoutDeferred.promise]).then(
+      ([data]) => {
+        sandbox.verifyAndRestore();
+        return data;
+      },
+      (error) => {
+        sandbox.restore();
+        if (error === ALREADY_FAILED) return;
+        return reject(error);
+      }
+    );
   };
 
   try {

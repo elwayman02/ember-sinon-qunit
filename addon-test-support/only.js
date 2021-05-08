@@ -6,10 +6,15 @@ import { wrapTest, commonConfig } from './utils/config';
 commonConfig();
 
 export default function only(testName, callback) {
-  deprecate('This pattern is now deprecated. Please import the `setupSinon` method instead.', false, {
-    id: 'ember-sinon-qunit.only',
-    until: '5.0.0',
-    url: 'https://github.com/elwayman02/ember-sinon-qunit#migration-from-older-versions-of-ember-sinon-qunit'
-  });
+  deprecate(
+    'This pattern is now deprecated. Please import the `setupSinon` method instead.',
+    false,
+    {
+      id: 'ember-sinon-qunit.only',
+      until: '5.0.0',
+      url:
+        'https://github.com/elwayman02/ember-sinon-qunit#migration-from-older-versions-of-ember-sinon-qunit',
+    }
+  );
   wrapTest(testName, callback, emberQUnitOnly);
 }
