@@ -3,7 +3,7 @@ import { typeOf } from '@ember/utils';
 const obj = {
   foo() {},
   bar() {},
-  baz() {}
+  baz() {},
 };
 
 /**
@@ -12,7 +12,6 @@ const obj = {
  * brought into (e.g. `module`, `moduleFor`, `moduleForComponent`)
  */
 export default function assertSinonInTestContext(test) {
-
   test('brings spy() into test context', function (assert) {
     assert.equal(typeOf(this.spy), 'function', 'spy exists');
 
@@ -62,12 +61,16 @@ export default function assertSinonInTestContext(test) {
   });
 
   test('brings replaceGetter() into test context', function (assert) {
-    assert.equal(typeOf(this.replaceGetter), 'function', 'replaceGetter exists');
+    assert.equal(
+      typeOf(this.replaceGetter),
+      'function',
+      'replaceGetter exists'
+    );
 
     const thing = {
       get y() {
         return 'yo';
-      }
+      },
     };
 
     const stub = this.stub().returns('oy');
@@ -78,12 +81,16 @@ export default function assertSinonInTestContext(test) {
   });
 
   test('brings replaceSetter() into test context', function (assert) {
-    assert.equal(typeOf(this.replaceSetter), 'function', 'replaceSetter exists');
+    assert.equal(
+      typeOf(this.replaceSetter),
+      'function',
+      'replaceSetter exists'
+    );
 
     const thing = {
       set y(val) {
         //this._y = val;
-      }
+      },
     };
 
     const stub = this.stub();
@@ -95,7 +102,11 @@ export default function assertSinonInTestContext(test) {
 
   test('brings sandbox() into test context', function (assert) {
     assert.equal(typeOf(this.sandbox), 'object', 'sandbox exists');
-    assert.equal(this.sandbox.injectInto, this, 'sandbox was injected into context');
+    assert.equal(
+      this.sandbox.injectInto,
+      this,
+      'sandbox was injected into context'
+    );
     const keys = this.sandbox.injectedKeys;
     assert.equal(keys.length, 4, '4 keys were injected');
     assert.equal(keys[0], 'spy', 'spy is injected');

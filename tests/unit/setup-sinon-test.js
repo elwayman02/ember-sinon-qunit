@@ -5,8 +5,8 @@ import {
   restoreSandbox,
 } from 'ember-sinon-qunit/test-support/sinon-sandbox';
 
-module('Unit | ember-sinon-qunit | Setup in testStart/testDone', function() {
-  test(`configuring setup/restore`, function(assert) {
+module('Unit | ember-sinon-qunit | Setup in testStart/testDone', function () {
+  test(`configuring setup/restore`, function (assert) {
     assert.expect(4);
 
     let testStartCalled = false;

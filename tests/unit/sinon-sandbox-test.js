@@ -5,8 +5,8 @@ import {
   restoreSandbox,
 } from 'ember-sinon-qunit/test-support/sinon-sandbox';
 
-module(`Unit | ember-sinon-qunit`, function() {
-  test('`restoreSandbox` resets sinon', function(assert) {
+module(`Unit | ember-sinon-qunit`, function () {
+  test('`restoreSandbox` resets sinon', function (assert) {
     assert.expect(2);
 
     const foo = () => true;
@@ -23,7 +23,7 @@ module(`Unit | ember-sinon-qunit`, function() {
     assert.equal(bar.foo, foo);
   });
 
-  test('`sinon.restore()` can still be called explicitly', function(assert) {
+  test('`sinon.restore()` can still be called explicitly', function (assert) {
     assert.expect(2);
 
     const foo = () => true;
@@ -42,7 +42,7 @@ module(`Unit | ember-sinon-qunit`, function() {
     restoreSandbox();
   });
 
-  test('using useFakeTimers API continues to work', function(assert) {
+  test('using useFakeTimers API continues to work', function (assert) {
     assert.expect(1);
 
     createSandbox();
@@ -57,7 +57,7 @@ module(`Unit | ember-sinon-qunit`, function() {
     restoreSandbox();
   });
 
-  test('using sinon.useFakeTimers correctly restores clocks', function(assert) {
+  test('using sinon.useFakeTimers correctly restores clocks', function (assert) {
     assert.expect(2);
 
     createSandbox();
@@ -73,7 +73,7 @@ module(`Unit | ember-sinon-qunit`, function() {
     assert.notEqual(Date.now(), 10000);
   });
 
-  test('using sinon.useFakeTimers multiple times in a single test throws', function(assert) {
+  test('using sinon.useFakeTimers multiple times in a single test throws', function (assert) {
     assert.expect(1);
 
     createSandbox();
