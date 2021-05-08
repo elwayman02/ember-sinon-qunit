@@ -152,51 +152,6 @@ cd my-ember-app-or-addon
 npx ember-sinon-qunit-codemod tests
 ```
 
-Deprecated Features
-------------------------------------------------------------------------------
-
-*Note: The following features are **deprecated** and should not be used, as they will be removed in a future major release.*
-
-Import `ember-sinon-qunit`'s `test` method into your tests in place of `ember-qunit`'s test. This creates a `sinon` `sandbox`
-around that test via `sinon`'s `test` API. Then, you can access the following `sinon` functions via `this` within the test callback:
-* `spy`, 
-* `stub`, 
-* `mock`, 
-* `fake`,
-* `replace`
-* `replaceGetter`
-* `replaceSetter`
-* `sandbox`
-
-```javascript
-import { module } from 'qunit';
-import test from 'ember-sinon-qunit/test-support/test';
-import { setupTest } from 'ember-qunit';
-
-module('Unit | Route | foo', function(hooks) {
-  setupTest(hooks);
-
-  test('fooTransition action transitions to bar route', function (assert) {
-    let route = this.owner.lookup('route:foo');
-    const stub = this.stub(route, 'transitionTo');
-    
-    route.send('fooTransition');
-    
-    assert.ok(stub.calledOnce, 'transitionTo was called once');
-    assert.ok(stub.calledWithExactly('bar'), 'bar was passed to transitionTo');
-  });
-});
-```
-
-That's it! You can use this `test` method in place of all `ember-qunit` tests if you want, without any 
-loss of functionality. Or, you can import them both into the same test to be used only when you need `sinon`:
-
-```javascript
-import { module } from 'qunit';
-import test from 'ember-sinon-qunit/test-support/test';
-import { setupTest } from 'ember-qunit';
-```
-
 Contributing
 ------------------------------------------------------------------------------
 
