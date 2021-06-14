@@ -34,7 +34,7 @@
     "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
-    "broccoli-funnel": "^3.0.6",
+    "broccoli-funnel": "^3.0.7",
     "ember-cli-babel": "^7.26.6",
     "ember-sinon": "^5.0.0"
   },
