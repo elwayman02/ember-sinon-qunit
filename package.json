@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "broccoli-funnel": "^3.0.8",
-    "ember-cli-babel": "^7.26.6",
+    "ember-cli-babel": "^7.26.10",
     "ember-sinon": "^5.0.0"
   },
   "devDependencies": {
