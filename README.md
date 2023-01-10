@@ -1,5 +1,4 @@
-Ember Sinon QUnit
-=================
+# Ember Sinon QUnit
 
 [![Build Status](https://travis-ci.org/elwayman02/ember-sinon-qunit.svg?branch=master)](https://travis-ci.org/elwayman02/ember-sinon-qunit)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-sinon-qunit.svg)](http://emberobserver.com/addons/ember-sinon-qunit)
@@ -21,25 +20,22 @@ will be automatically restored to their original methods at the end of each test
 with other addons like [`ember-cli-mocha`](http://jhawk.co/ember-cli-mocha), for example.
 
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
 * Sinon.js v5.0.0 or above
-* Ember.js v3.16 or above
-* Ember CLI v2.13 or above
-* Node.js v12 or above
+* Ember.js v3.28 or above
+* Ember CLI v3.28 or above
+* Node.js v14 or above
 
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install ember-sinon-qunit
 ```
 
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 To use, import the setup method into your `tests/test-helper.js` file and execute it.
 
@@ -152,13 +148,11 @@ cd my-ember-app-or-addon
 npx ember-sinon-qunit-codemod tests
 ```
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
