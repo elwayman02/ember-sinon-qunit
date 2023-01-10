@@ -4,7 +4,17 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
-    // Add options here
+    autoImport: {
+      webpack: {
+        resolve: {
+          fallback: {
+            // Sinon is not browser compatible...
+            // We should stop using sinon...
+            util: require.resolve('util/')
+          }
+        }
+      }
+    },
   });
 
   /*
