@@ -6,12 +6,21 @@ module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
     autoImport: {
       webpack: {
+        module: {
+          rules: [{ test: /sinon\.js$/, use: {
+              loader: "imports-loader",
+              options: {
+                imports: {
+                  syntax: "default",
+                  moduleName: "sinon/pkg/sinon.js",
+                  name: "sinon"
+                }
+              }
+            }
+          }]
+        },
         resolve: {
-          fallback: {
-            // Sinon is not browser compatible...
-            // We should stop using sinon...
-            util: require.resolve('util/')
-          }
+          alias: { sinon: 'sinon/pkg/sinon.js' }
         }
       }
     },
