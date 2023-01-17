@@ -4,11 +4,7 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
-    autoImport: {
-      alias: {
-        sinon: 'sinon/pkg/sinon-esm',
-      },
-    },
+    // Add options here
   });
 
   /*

@@ -29,20 +29,7 @@ will be automatically restored to their original methods at the end of each test
 ember install ember-sinon-qunit
 ```
 
-`sinon` is a peerDependency of this addon, to make your app be in control of its version. So install it with your favorite package manager as well, e.g. `yarn add -D sinon`.
-
-If you use the latest version v15, then you need to tell ember-auto-import to import the ESM version, instead of the default build used for node.js.
-So update your `ember-cli-build.js` and add the `alias` option to its config as follows:
-
-```js
-let app = new EmberAddon(defaults, {
-  autoImport: {
-    alias: {
-      sinon: 'sinon/pkg/sinon-esm',
-    },
-  },
-});
-```
+`sinon` is a peerDependency of this addon, so install it with your favorite package manager as well, e.g. `yarn add -D sinon`.
 
 ## Usage
 
