@@ -35,8 +35,8 @@
   },
   "dependencies": {
     "broccoli-funnel": "^3.0.8",
-    "ember-cli-babel": "^7.26.11",
-    "ember-sinon": "^5.0.0"
+    "ember-auto-import": "^2.5.0",
+    "ember-cli-babel": "^7.26.11"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
@@ -47,7 +47,6 @@
     "@glimmer/tracking": "^1.1.2",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
     "concurrently": "^7.6.0",
-    "ember-auto-import": "^2.5.0",
     "ember-cli": "~4.9.2",
     "ember-cli-dependency-checker": "^3.3.1",
     "ember-cli-htmlbars": "^6.1.1",
@@ -78,7 +77,8 @@
     "webpack": "^5.75.0"
   },
   "peerDependencies": {
-    "ember-source": "^3.28.0 || ^4.0.0"
+    "ember-source": "^3.28.0 || ^4.0.0",
+    "sinon": "^15.0.1"
   },
   "engines": {
     "node": "14.* || 16.* || >= 18"
