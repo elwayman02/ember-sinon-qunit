@@ -15,12 +15,12 @@ module('Unit | ember-sinon-qunit | Setup in testStart/testDone', function () {
     let qunit = {
       testStart(callback) {
         testStartCalled = true;
-        assert.equal(callback, createSandbox);
+        assert.strictEqual(callback, createSandbox);
       },
 
       testDone(callback) {
         testDoneCalled = true;
-        assert.equal(callback, restoreSandbox);
+        assert.strictEqual(callback, restoreSandbox);
       },
     };
 

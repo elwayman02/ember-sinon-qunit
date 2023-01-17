@@ -1,12 +1,15 @@
-import { computed } from '@ember/object';
 import Model from '@ember-data/model';
 import { attr } from '@ember-data/model';
+import { tracked } from '@glimmer/tracking';
 
-export default Model.extend({
-  firstName: attr('string'),
-  lastName: attr('string'),
+export default class UserModel extends Model {
+  @tracked
+  firstName = attr('string');
 
-  fullName: computed('firstName', 'lastName', function () {
+  @tracked
+  lastName = attr('string');
+
+  fullName() {
     return `${this.firstName} ${this.lastName}`;
-  }),
-});
+  }
+}

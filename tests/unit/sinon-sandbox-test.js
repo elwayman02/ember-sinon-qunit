@@ -20,7 +20,7 @@ module(`Unit | ember-sinon-qunit`, function () {
 
     restoreSandbox();
 
-    assert.equal(bar.foo, foo);
+    assert.strictEqual(bar.foo, foo);
   });
 
   test('`sinon.restore()` can still be called explicitly', function (assert) {
@@ -37,7 +37,7 @@ module(`Unit | ember-sinon-qunit`, function () {
 
     sinon.restore();
 
-    assert.equal(bar.foo, foo);
+    assert.strictEqual(bar.foo, foo);
 
     restoreSandbox();
   });
@@ -66,7 +66,7 @@ module(`Unit | ember-sinon-qunit`, function () {
 
     clock.tick(10000);
 
-    assert.equal(Date.now(), 10000);
+    assert.strictEqual(Date.now(), 10000);
 
     restoreSandbox();
 
