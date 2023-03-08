@@ -12,7 +12,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noImplicitReturns": true,
-    // change to true when all files are switched over to ts
     "noEmitOnError": false,
     "noEmit": false,
     "inlineSourceMap": true,
