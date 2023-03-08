@@ -1,5 +1,9 @@
 import { createSandbox, restoreSandbox } from './sinon-sandbox';
-
+declare global {
+  interface Window {
+    QUnit: QUnit;
+  }
+}
 /**
  * Allows for creating and restoring a global sinon sandbox per test. This is
  * done via the `QUnit.testStart` and `QUnit.testDone` methods.

@@ -1,7 +1,7 @@
-import sinon from 'sinon';
+import sinon, { SinonSandbox } from 'sinon';
 
-let originalUseFakeTimers;
-let clockToRestore;
+let originalUseFakeTimers: SinonSandbox['useFakeTimers'];
+let clockToRestore: SinonSandbox['clock'] | null;
 
 /**
  * Performs setup functionality for the sandbox before each test
@@ -37,7 +37,7 @@ export function restoreSandbox() {
  * @param {object} sandbox
  * @returns {object} a clock object returned from `useFakeTimers`
  */
-function patchUseFakeTimers(sandbox) {
+function patchUseFakeTimers(sandbox: SinonSandbox) {
   originalUseFakeTimers = sandbox.useFakeTimers;
 
   sandbox.useFakeTimers = function () {
@@ -47,7 +47,7 @@ function patchUseFakeTimers(sandbox) {
       );
     }
 
-    let clock = originalUseFakeTimers.apply(sandbox, arguments);
+    const clock = originalUseFakeTimers.apply(sandbox);
 
     clockToRestore = clock;
 
