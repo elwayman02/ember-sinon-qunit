@@ -1,3 +1,4 @@
+import sinon from 'sinon';
 import { createSandbox, restoreSandbox } from './sinon-sandbox';
 
 /**
@@ -11,4 +12,7 @@ import { createSandbox, restoreSandbox } from './sinon-sandbox';
 export default function setupSinon(testEnvironment = self.QUnit) {
   testEnvironment.testStart(createSandbox);
   testEnvironment.testDone(restoreSandbox);
+
+  sinon.assert.pass = (assertion) => self.QUnit.assert.ok(true, assertion);
+  sinon.assert.fail = (assertion) => self.QUnit.assert.ok(false, assertion);
 }
