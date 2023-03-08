@@ -1,7 +1,6 @@
 import { typeOf } from '@ember/utils';
 import {
   SinonFake,
-  SinonMock,
   SinonSpy,
   SinonStub,
   SinonSandbox,
@@ -18,7 +17,7 @@ const obj = {
 interface TestContextExtended extends TestContext {
   spy: SinonSpy;
   stub: SinonStub;
-  mock: SinonMock;
+  mock: SinonSandbox['mock'];
   fake: SinonFake;
   replace: SinonSandbox['replace'];
   replaceGetter: SinonSandbox['replaceGetter'];
@@ -52,11 +51,8 @@ export default function assertSinonInTestContext(test: QUnit['test']) {
     assert.ok(stub.calledOnce, 'stub registered call');
   });
 
-  test('brings mock() into test context', function (this: TestContextExtended, assert: {
-    equal: (arg0: string, arg1: string, arg2: string) => void;
-  }) {
+  test('brings mock() into test context', function (this: TestContextExtended, assert) {
     assert.equal(typeOf(this.mock), 'function', 'mock exists');
-    /* @ts-expect-error @rehearsal TODO TS2349: This expression is not callable..  Type 'SinonMock' has no call signatures. */
     const mock = this.mock(obj);
     mock.expects('baz').once();
     obj.baz();
@@ -139,9 +135,7 @@ export default function assertSinonInTestContext(test: QUnit['test']) {
     assert.equal(keys[3], 'sandbox', 'sandbox is injected');
   });
 
-  test('sinon sandbox cleans up after itself', function (this: TestContextExtended, assert: {
-    ok: (arg0: boolean, arg1: string) => void;
-  }) {
+  test('sinon sandbox cleans up after itself', function (this: TestContextExtended, assert) {
     const spy: SinonSpy = this.spy(obj, 'foo');
     const stub: SinonStub = this.stub(obj, 'bar');
 
