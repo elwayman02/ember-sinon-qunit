@@ -13,7 +13,6 @@ module('Unit | ember-sinon-qunit | Setup in testStart/testDone', function () {
     let testDoneCalled = false;
 
     let qunit = {
-      // eslint-disable-line
       testStart(callback = () => {}) {
         testStartCalled = true;
         assert.strictEqual(callback, createSandbox);

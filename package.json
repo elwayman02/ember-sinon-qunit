@@ -112,6 +112,7 @@
   },
   "peerDependencies": {
     "ember-source": "^3.28.0 || ^4.0.0",
+    "qunit": "^2.19.4",
     "sinon": "^15.0.1"
   },
   "engines": {
