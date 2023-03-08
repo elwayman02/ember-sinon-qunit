@@ -2,7 +2,7 @@
   "extends": "@tsconfig/ember/tsconfig.json",
   "compilerOptions": {
     "experimentalDecorators": true,
-    "target": "es2017",
+    "target": "es2020",
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -12,7 +12,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noImplicitReturns": true,
-    "noEmitOnError": false,
+    "noEmitOnError": true,
     "noEmit": false,
     "inlineSourceMap": true,
     "inlineSources": true,
