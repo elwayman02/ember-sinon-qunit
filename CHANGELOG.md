@@ -1,4 +1,21 @@
 
+
+## v7.1.0 (2023-03-09)
+
+#### :rocket: Enhancement
+* [#755](https://github.com/elwayman02/ember-sinon-qunit/pull/755) typescript migration ([@robostheimer](https://github.com/robostheimer))
+
+#### :memo: Documentation
+* [#729](https://github.com/elwayman02/ember-sinon-qunit/pull/729) Generate full changelog ([@elwayman02](https://github.com/elwayman02))
+
+#### :house: Internal
+* [#756](https://github.com/elwayman02/ember-sinon-qunit/pull/756) Ember 4.11 Blueprint ([@elwayman02](https://github.com/elwayman02))
+* [#729](https://github.com/elwayman02/ember-sinon-qunit/pull/729) Generate full changelog ([@elwayman02](https://github.com/elwayman02))
+
+#### Committers: 2
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+- Rob Ostheimer ([@robostheimer](https://github.com/robostheimer))
+
 ## v7.0.0 (2023-01-17)
 
 #### :boom: Breaking Change
