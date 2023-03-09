@@ -1,4 +1,12 @@
 import { typeOf } from '@ember/utils';
+import {
+  SinonFake,
+  SinonSpy,
+  SinonStub,
+  SinonSandbox,
+  SinonSandboxConfig,
+} from 'sinon';
+import { TestContext } from '@ember/test-helpers';
 
 const obj = {
   foo() {},
@@ -6,33 +14,45 @@ const obj = {
   baz() {},
 };
 
+interface TestContextExtended extends TestContext {
+  spy: SinonSpy;
+  stub: SinonStub;
+  mock: SinonSandbox['mock'];
+  fake: SinonFake;
+  replace: SinonSandbox['replace'];
+  replaceGetter: SinonSandbox['replaceGetter'];
+  replaceSetter: SinonSandbox['replaceSetter'];
+  sandbox: SinonSandBoxExtended;
+}
+
+interface SinonSandBoxExtended extends SinonSandboxConfig {
+  injectedKeys: string[];
+}
+
 /**
  * Performs a series of assertions for the presence of sinon functionality
  * in whatever module variant that the `test` context is currently being
  * brought into (e.g. `module`, `moduleFor`, `moduleForComponent`)
  */
-export default function assertSinonInTestContext(test) {
-  test('brings spy() into test context', function (assert) {
+export default function assertSinonInTestContext(test: QUnit['test']) {
+  test('brings spy() into test context', function (this: TestContextExtended, assert: Assert) {
     assert.equal(typeOf(this.spy), 'function', 'spy exists');
-
-    const spy = this.spy(obj, 'foo');
+    const spy: SinonSpy = this.spy(obj, 'foo');
     obj.foo();
 
     assert.ok(spy.calledOnce, 'spy registered call');
   });
 
-  test('brings stub() into test context', function (assert) {
+  test('brings stub() into test context', function (this: TestContextExtended, assert: Assert) {
     assert.equal(typeOf(this.stub), 'function', 'stub exists');
-
-    const stub = this.stub(obj, 'bar');
+    const stub: SinonStub = this.stub(obj, 'bar');
     obj.bar();
 
     assert.ok(stub.calledOnce, 'stub registered call');
   });
 
-  test('brings mock() into test context', function (assert) {
+  test('brings mock() into test context', function (this: TestContextExtended, assert) {
     assert.equal(typeOf(this.mock), 'function', 'mock exists');
-
     const mock = this.mock(obj);
     mock.expects('baz').once();
     obj.baz();
@@ -40,7 +60,7 @@ export default function assertSinonInTestContext(test) {
     mock.verify();
   });
 
-  test('brings fake() into test context', function (assert) {
+  test('brings fake() into test context', function (this: TestContextExtended, assert) {
     assert.equal(typeOf(this.fake), 'function', 'fake exists');
 
     const fake = this.fake.returns('paz');
@@ -50,7 +70,7 @@ export default function assertSinonInTestContext(test) {
     assert.equal(result, 'paz');
   });
 
-  test('brings replace() into test context', function (assert) {
+  test('brings replace() into test context', function (this: TestContextExtended, assert) {
     assert.equal(typeOf(this.replace), 'function', 'replace exists');
 
     const stub = this.stub();
@@ -60,7 +80,7 @@ export default function assertSinonInTestContext(test) {
     assert.ok(stub.calledOnce, 'replaced() stub registered call');
   });
 
-  test('brings replaceGetter() into test context', function (assert) {
+  test('brings replaceGetter() into test context', function (this: TestContextExtended, assert) {
     assert.equal(
       typeOf(this.replaceGetter),
       'function',
@@ -73,14 +93,14 @@ export default function assertSinonInTestContext(test) {
       },
     };
 
-    const stub = this.stub().returns('oy');
+    const stub: SinonStub = this.stub().returns('oy');
     this.replaceGetter(thing, 'y', stub);
     thing.y;
 
     assert.ok(stub.calledOnce, 'replacedGetter() stub registered call');
   });
 
-  test('brings replaceSetter() into test context', function (assert) {
+  test('brings replaceSetter() into test context', function (this: TestContextExtended, assert) {
     assert.equal(
       typeOf(this.replaceSetter),
       'function',
@@ -88,19 +108,19 @@ export default function assertSinonInTestContext(test) {
     );
 
     const thing = {
-      set y(val) {
+      set y(_val: number) {
         //this._y = val;
       },
     };
 
-    const stub = this.stub();
+    const stub: SinonStub = this.stub();
     this.replaceSetter(thing, 'y', stub);
     thing.y = 1;
 
     assert.ok(stub.calledOnce, 'replacedSetter() stub registered call');
   });
 
-  test('brings sandbox() into test context', function (assert) {
+  test('brings sandbox() into test context', function (this: TestContextExtended, assert) {
     assert.equal(typeOf(this.sandbox), 'object', 'sandbox exists');
     assert.equal(
       this.sandbox.injectInto,
@@ -115,9 +135,9 @@ export default function assertSinonInTestContext(test) {
     assert.equal(keys[3], 'sandbox', 'sandbox is injected');
   });
 
-  test('sinon sandbox cleans up after itself', function (assert) {
-    const spy = this.spy(obj, 'foo');
-    const stub = this.stub(obj, 'bar');
+  test('sinon sandbox cleans up after itself', function (this: TestContextExtended, assert) {
+    const spy: SinonSpy = this.spy(obj, 'foo');
+    const stub: SinonStub = this.stub(obj, 'bar');
 
     assert.ok(!spy.called, 'spy has no registered calls');
     assert.ok(!stub.called, 'stub has no registered calls');
