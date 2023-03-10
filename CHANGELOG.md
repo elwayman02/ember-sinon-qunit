@@ -1,5 +1,14 @@
 
 
+
+## v7.1.1 (2023-03-10)
+
+#### :bug: Bug Fix
+* [#757](https://github.com/elwayman02/ember-sinon-qunit/pull/757) Fixing fake-timers issue brought up by @andreyfel ([@robostheimer](https://github.com/robostheimer))
+
+#### Committers: 1
+- Rob Ostheimer ([@robostheimer](https://github.com/robostheimer))
+
 ## v7.1.0 (2023-03-09)
 
 #### :rocket: Enhancement
