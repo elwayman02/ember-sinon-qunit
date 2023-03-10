@@ -1,4 +1,5 @@
-import sinon, { SinonSandbox } from 'sinon';
+import sinon, { SinonFakeTimers, SinonSandbox } from 'sinon';
+import { FakeTimerInstallOpts } from '@sinonjs/fake-timers';
 
 let originalUseFakeTimers: SinonSandbox['useFakeTimers'];
 let clockToRestore: SinonSandbox['clock'] | null;
@@ -39,15 +40,15 @@ export function restoreSandbox() {
  */
 function patchUseFakeTimers(sandbox: SinonSandbox) {
   originalUseFakeTimers = sandbox.useFakeTimers;
-
-  sandbox.useFakeTimers = function () {
+  sandbox.useFakeTimers = function (
+    config?: number | Date | Partial<FakeTimerInstallOpts>
+  ): SinonFakeTimers {
     if (clockToRestore) {
       throw new Error(
         "You called sinon's useFakeTimers multiple times within the same test. This can result in unknown behavior."
       );
     }
-
-    const clock = originalUseFakeTimers.apply(sandbox);
+    const clock = originalUseFakeTimers.apply(sandbox, [config]);
 
     clockToRestore = clock;
 
