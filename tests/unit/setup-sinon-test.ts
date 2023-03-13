@@ -1,4 +1,4 @@
-import { module, test } from 'qunit';
+import QUnit, { module, test } from 'qunit';
 import setupSinon from 'ember-sinon-qunit';
 import {
   createSandbox,
@@ -12,7 +12,7 @@ module('Unit | ember-sinon-qunit | Setup in testStart/testDone', function () {
     let testStartCalled = false;
     let testDoneCalled = false;
 
-    let qunit = {
+    let qunit: Partial<QUnit> = {
       testStart(callback = () => {}) {
         testStartCalled = true;
         assert.strictEqual(callback, createSandbox);
