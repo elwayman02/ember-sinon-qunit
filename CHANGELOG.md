@@ -1,6 +1,15 @@
 
 
 
+
+## v7.1.2 (2023-03-14)
+
+#### :bug: Bug Fix
+* [#763](https://github.com/elwayman02/ember-sinon-qunit/pull/763) adding setupSinon function to dummy/index.d.ts to allow for types in … ([@robostheimer](https://github.com/robostheimer))
+
+#### Committers: 1
+- Rob Ostheimer ([@robostheimer](https://github.com/robostheimer))
+
 ## v7.1.1 (2023-03-10)
 
 #### :bug: Bug Fix
