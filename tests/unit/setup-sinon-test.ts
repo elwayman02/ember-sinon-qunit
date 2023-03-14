@@ -11,16 +11,16 @@ module('Unit | ember-sinon-qunit | Setup in testStart/testDone', function () {
 
     let testStartCalled = false;
     let testDoneCalled = false;
-    const qunit: QUnit = Object.assign(QUnit, {
-      testDone: (callback = () => {}) => {
-        testDoneCalled = true;
-        assert.strictEqual(callback, restoreSandbox);
-      },
-      testStart: (callback = () => {}) => {
-        testStartCalled = true;
-        assert.strictEqual(callback, createSandbox);
-      },
-    });
+    const qunit = QUnit;
+
+    qunit.testDone = (callback = () => {}) => {
+      testDoneCalled = true;
+      assert.strictEqual(callback, restoreSandbox);
+    };
+    qunit.testStart = (callback = () => {}) => {
+      testStartCalled = true;
+      assert.strictEqual(callback, createSandbox);
+    };
 
     setupSinon(qunit);
 
