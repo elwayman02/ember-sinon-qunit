@@ -2,6 +2,15 @@
 
 
 
+
+## v7.1.3 (2023-03-15)
+
+#### :bug: Bug Fix
+* [#764](https://github.com/elwayman02/ember-sinon-qunit/pull/764) moving index.d.ts outside of dummy folder ([@robostheimer](https://github.com/robostheimer))
+
+#### Committers: 1
+- Rob Ostheimer ([@robostheimer](https://github.com/robostheimer))
+
 ## v7.1.2 (2023-03-14)
 
 #### :bug: Bug Fix
