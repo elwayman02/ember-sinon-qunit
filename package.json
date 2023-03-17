@@ -149,5 +149,12 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "types/*"
+      ]
+    }
   }
 }
