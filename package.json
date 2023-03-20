@@ -150,11 +150,5 @@
       "tokenRef": "GITHUB_AUTH"
     }
   },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "types/*"
-      ]
-    }
-  }
+  "types": "./index.d.ts"
 }
