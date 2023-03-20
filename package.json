@@ -1,6 +1,6 @@
 {
   "name": "ember-sinon-qunit",
-  "version": "7.1.3",
+  "version": "7.1.4",
   "description": "Sinon sandbox test integration for QUnit",
   "keywords": [
     "ember-addon",

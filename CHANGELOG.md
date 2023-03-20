@@ -3,6 +3,15 @@
 
 
 
+
+## v7.1.4 (2023-03-20)
+
+#### :bug: Bug Fix
+* [#765](https://github.com/elwayman02/ember-sinon-qunit/pull/765) adding new index.d.ts declaration file to the root of the types directory and added a typesVersions field to package.json ([@robostheimer](https://github.com/robostheimer))
+
+#### Committers: 1
+- Rob Ostheimer ([@robostheimer](https://github.com/robostheimer))
+
 ## v7.1.3 (2023-03-15)
 
 #### :bug: Bug Fix
