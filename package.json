@@ -149,5 +149,6 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     }
-  }
+  },
+  "types": "types/index.d.ts"
 }
