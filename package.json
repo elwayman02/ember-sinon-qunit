@@ -106,7 +106,7 @@
     "prettier": "^2.8.7",
     "qunit": "^2.19.4",
     "qunit-dom": "^2.0.0",
-    "release-it": "^15.10.1",
+    "release-it": "^15.10.5",
     "sinon": "^15.0.3",
     "typescript": "^5.0.3",
     "webpack": "^5.77.0"
