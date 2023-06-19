@@ -107,14 +107,14 @@
     "qunit": "^2.19.4",
     "qunit-dom": "^2.0.0",
     "release-it": "^15.10.1",
-    "sinon": "^15.0.3",
+    "sinon": "^15.1.2",
     "typescript": "^5.0.3",
     "webpack": "^5.77.0"
   },
   "peerDependencies": {
     "ember-source": "^3.28.0 || ^4.0.0",
     "qunit": "^2.0.0",
-    "sinon": "^15.0.3"
+    "sinon": "^15.1.2"
   },
   "engines": {
     "node": "14.* || 16.* || >= 18"
