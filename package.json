@@ -48,7 +48,7 @@
     "@ember/optional-features": "^2.0.0",
     "@ember/string": "^3.0.1",
     "@ember/test-helpers": "^3.2.0",
-    "@embroider/test-setup": "^2.1.1",
+    "@embroider/test-setup": "^3.0.2",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
@@ -87,7 +87,7 @@
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
-    "ember-data": "^4.11.3",
+    "ember-data": "^5.3.0",
     "ember-load-initializers": "^2.1.2",
     "ember-page-title": "^7.0.0",
     "ember-qunit": "^7.0.0",
@@ -112,7 +112,7 @@
     "webpack": "^5.88.2"
   },
   "peerDependencies": {
-    "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
+    "ember-source": "^4.0.0 || >=5.0.0",
     "qunit": "^2.0.0",
     "sinon": "^15.0.3 || ^16.0.0"
   },
