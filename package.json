@@ -36,17 +36,18 @@
     "postpack": "ember ts:clean"
   },
   "dependencies": {
-    "@types/sinon": "^10.0.13",
+    "@types/sinon": "^10.0.19",
     "broccoli-funnel": "^3.0.8",
-    "ember-auto-import": "^2.6.1",
-    "ember-cli-babel": "^7.26.11",
+    "ember-auto-import": "^2.6.3",
+    "ember-cli-babel": "^8.2.0",
     "ember-cli-typescript": "^5.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.0",
     "@babel/eslint-parser": "^7.21.3",
     "@ember/optional-features": "^2.0.0",
     "@ember/string": "^3.0.1",
-    "@ember/test-helpers": "^2.9.3",
+    "@ember/test-helpers": "^3.2.0",
     "@embroider/test-setup": "^2.1.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
@@ -58,7 +59,6 @@
     "@types/ember-data__model": "^4.0.0",
     "@types/ember-data__serializer": "^4.0.1",
     "@types/ember-data__store": "^4.0.2",
-    "@types/ember-qunit": "^6.1.1",
     "@types/ember-resolver": "^9.0.0",
     "@types/ember__application": "^4.0.5",
     "@types/ember__array": "^4.0.3",
@@ -90,12 +90,12 @@
     "ember-data": "^4.11.3",
     "ember-load-initializers": "^2.1.2",
     "ember-page-title": "^7.0.0",
-    "ember-qunit": "^6.2.0",
+    "ember-qunit": "^7.0.0",
     "ember-resolver": "^10.0.0",
     "ember-source": "~4.11.0",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^5.7.2",
-    "ember-try": "^2.0.0",
+    "ember-try": "^3.0.0",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-ember": "^11.4.9",
@@ -104,23 +104,23 @@
     "eslint-plugin-qunit": "^7.3.4",
     "loader.js": "^4.7.0",
     "prettier": "^2.8.7",
-    "qunit": "^2.19.4",
+    "qunit": "^2.20.0",
     "qunit-dom": "^2.0.0",
     "release-it": "^15.10.1",
-    "sinon": "^15.0.3",
+    "sinon": "^16.1.0",
     "typescript": "^5.0.3",
-    "webpack": "^5.77.0"
+    "webpack": "^5.88.2"
   },
   "peerDependencies": {
     "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
     "qunit": "^2.0.0",
-    "sinon": "^15.0.3"
+    "sinon": "^15.0.3 || ^16.0.0"
   },
   "engines": {
-    "node": "14.* || 16.* || >= 18"
+    "node": "16.* || >= 18"
   },
   "volta": {
-    "node": "14.21.1",
+    "node": "16.20.2",
     "yarn": "1.22.19"
   },
   "publishConfig": {

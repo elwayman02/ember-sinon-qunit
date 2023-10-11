@@ -20,7 +20,7 @@ will be automatically restored to their original methods at the end of each test
 - Sinon.js v15.0.0 or above
 - Ember.js v3.28 or above
 - Ember CLI v3.28 or above
-- Node.js v14 or above
+- Node.js v16 or above
 - ember-auto-import v2 required
 
 ## Installation
