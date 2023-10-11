@@ -8,10 +8,10 @@ module.exports = async function () {
     useYarn: true,
     scenarios: [
       {
-        name: 'ember-lts-4.4',
+        name: 'ember-lts-4.8',
         npm: {
           devDependencies: {
-            'ember-source': '~4.4.0',
+            'ember-source': '~4.8.0',
           },
         },
       },
@@ -50,7 +50,7 @@ module.exports = async function () {
         },
         npm: {
           devDependencies: {
-            'ember-source': '~4.4.0',
+            'ember-source': '~4.8.0',
           },
           ember: {
             edition: 'classic',
