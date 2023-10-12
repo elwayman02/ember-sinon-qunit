@@ -4,6 +4,19 @@
 
 
 
+
+## v7.2.0 (2023-10-12)
+
+#### :rocket: Enhancement
+* [#893](https://github.com/elwayman02/ember-sinon-qunit/pull/893) Add ember-source 5 support ([@SergeAstapov](https://github.com/SergeAstapov))
+
+#### :house: Internal
+* [#898](https://github.com/elwayman02/ember-sinon-qunit/pull/898) Upgrade Linting ([@elwayman02](https://github.com/elwayman02))
+
+#### Committers: 2
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+- Sergey Astapov ([@SergeAstapov](https://github.com/SergeAstapov))
+
 ## v7.1.4 (2023-03-20)
 
 #### :bug: Bug Fix
