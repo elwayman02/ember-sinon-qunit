@@ -112,12 +112,12 @@
     "webpack": "^5.88.2"
   },
   "peerDependencies": {
-    "ember-source": "^4.0.0 || >=5.0.0",
+    "ember-source": ">=3.28.0",
     "qunit": "^2.0.0",
     "sinon": "^15.0.3 || ^16.0.0"
   },
   "engines": {
-    "node": "16.* || >= 18"
+    "node": "14.* || 16.* || >= 18"
   },
   "volta": {
     "node": "16.20.2",
