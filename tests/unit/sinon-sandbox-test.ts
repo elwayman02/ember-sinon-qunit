@@ -51,7 +51,7 @@ module(`Unit | ember-sinon-qunit`, function () {
 
     assert.ok(
       clock,
-      'The clock API continues to work after forced sandboxing.'
+      'The clock API continues to work after forced sandboxing.',
     );
 
     restoreSandbox();
