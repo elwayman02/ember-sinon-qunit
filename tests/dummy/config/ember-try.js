@@ -40,12 +40,12 @@ module.exports = async function () {
         },
       },
       {
-        name: 'ember-classic',
+        name: 'ember-octane',
         env: {
           EMBER_OPTIONAL_FEATURES: JSON.stringify({
-            'application-template-wrapper': true,
+            'application-template-wrapper': false,
             'default-async-observers': false,
-            'template-only-glimmer-components': false,
+            'template-only-glimmer-components': true,
           }),
         },
         npm: {
@@ -53,7 +53,7 @@ module.exports = async function () {
             'ember-source': '~4.8.0',
           },
           ember: {
-            edition: 'classic',
+            edition: 'octane',
           },
         },
       },

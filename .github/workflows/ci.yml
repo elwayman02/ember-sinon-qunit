@@ -54,7 +54,7 @@ jobs:
         try-scenario:
           - ember-lts-4.8
           - ember-release
-          - ember-classic
+          - ember-octane
           - embroider-safe
         experimental: [false]
         include:
