@@ -43,7 +43,7 @@
     "ember-cli-typescript": "^5.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.0",
+    "@babel/core": "^7.23.2",
     "@babel/eslint-parser": "^7.21.3",
     "@ember/optional-features": "^2.0.0",
     "@ember/string": "^3.0.1",
