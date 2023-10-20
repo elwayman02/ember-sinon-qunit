@@ -115,5 +115,6 @@
   "types": "types/index.d.ts",
   "volta": {
     "extends": "../package.json"
-  }
+  },
+  "workspaces": ["ember-sinon-qunit"]
 }
