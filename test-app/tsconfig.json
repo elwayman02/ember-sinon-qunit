@@ -21,21 +21,18 @@
     // work with TypeScript.
     "baseUrl": ".",
     "paths": {
-      "dummy/tests/*": ["tests/*"],
-      "dummy/*": ["tests/dummy/app/*", "app/*"],
-      "ember-sinon-qunit": ["addon"],
-      "ember-sinon-qunit/*": ["addon/*"],
-      "ember-sinon-qunit/test-support": ["addon-test-support"],
-      "ember-sinon-qunit/test-support/*": ["addon-test-support/*"],
+      "test-app": ["app"],
+      "test-app/*": ["app/*"],
+      "test-app/tests/*": ["tests/*"],
       "*": ["types/*"]
     }
   },
   "include": [
     "app/**/*",
-    "addon/**/*",
     "tests/**/*",
     "types/**/*",
     "test-support/**/*",
-    "addon-test-support/**/*"
+    "addon/addon-test-support/**/*",
+    "config",
   ]
 }

@@ -23,6 +23,8 @@ jobs:
         uses: volta-cli/action@v4
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
+      - name: Precompile Typescript
+        run: yarn workspace ember-sinon-qunit run prepack
       - name: Lint
         run: yarn lint
       - name: Run Tests
@@ -39,6 +41,8 @@ jobs:
         uses: volta-cli/action@v4
       - name: Install Dependencies
         run: yarn install --no-lockfile
+      - name: Precompile Typescript
+        run: yarn workspace ember-sinon-qunit run prepack
       - name: Run Tests
         run: yarn test:ember
 
@@ -71,5 +75,7 @@ jobs:
         uses: volta-cli/action@v4
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
+      - name: Precompile Typescript
+        run: yarn workspace ember-sinon-qunit run prepack
       - name: Run Tests
-        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+        run: yarn workspace test-app run ember try:one ${{ matrix.try-scenario }}
