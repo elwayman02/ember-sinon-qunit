@@ -69,11 +69,7 @@
   "ember": {
     "edition": "octane"
   },
-  "ember-addon": {
-    "after": [
-      "ember-sinon"
-    ]
-  },
+  "ember-addon": {},
   "types": "types/index.d.ts",
   "volta": {
     "extends": "../package.json"
