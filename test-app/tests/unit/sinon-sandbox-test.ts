@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import {
   createSandbox,
   restoreSandbox,
-} from 'ember-sinon-qunit/test-support/sinon-sandbox';
+} from 'ember-sinon-qunit/test-support';
 
 module(`Unit | ember-sinon-qunit`, function () {
   test('`restoreSandbox` resets sinon', function (assert) {

@@ -19,18 +19,7 @@
     // The combination of `baseUrl` with `paths` allows Ember's classic package
     // layout, which is not resolvable with the Node resolution algorithm, to
     // work with TypeScript.
-    "baseUrl": ".",
-    "paths": {
-      "ember-sinon-qunit": ["addon"],
-      "ember-sinon-qunit/*": ["addon/*"],
-      "ember-sinon-qunit/test-support": ["addon-test-support"],
-      "ember-sinon-qunit/test-support/*": ["addon-test-support/*"],
-      "*": ["types/*"]
-    }
+    "baseUrl": "."
   },
-  "include": [
-    "addon/**/*",
-    "addon-test-support/**/*",
-    "types/**/*",
-  ]
+  "include": ["src/**/*"]
 }

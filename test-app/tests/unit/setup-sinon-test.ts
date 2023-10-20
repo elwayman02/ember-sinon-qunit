@@ -3,7 +3,7 @@ import setupSinon from 'ember-sinon-qunit';
 import {
   createSandbox,
   restoreSandbox,
-} from 'ember-sinon-qunit/test-support/sinon-sandbox';
+} from 'ember-sinon-qunit/test-support';
 
 module('Unit | ember-sinon-qunit | Setup in testStart/testDone', function () {
   test(`configuring setup/restore`, function (assert) {
