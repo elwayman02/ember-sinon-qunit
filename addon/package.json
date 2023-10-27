@@ -21,22 +21,34 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "rollup --config",
-    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
-    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
+    "build": "concurrently 'npm:build:*'",
+    "build:js": "rollup --config",
+    "build:types": "tsc --noEmit false --emitDeclarationOnly",
+    "lint": "concurrently 'npm:lint:*(!fix)' --names 'lint:'",
+    "lint:fix": "concurrently 'npm:lint:*:fix' --names 'fix:'",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
-    "prepublishOnly": "rollup --config",
-    "start": "rollup --config --watch"
+    "lint:types": "tsc",
+    "start": "concurrently 'npm:start:*'",
+    "start:js": "rollup --config --watch --no-watch.clearScreen",
+    "start:types": "tsc --noEmit false --emitDeclarationOnly --watch",
+    "test": "echo 'A v2 addon does not have tests, run tests in test-app'",
+    "prepack": "rollup --config"
   },
   "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js",
-    "./test-support": "./dist/test-support/index.js",
-    "./addon-main.cjs": "./addon-main.cjs"
+    ".": {
+      "types": "./declarations/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./test-support": {
+      "types": "./declarations/test-support/index.d.ts",
+      "default": "./dist/test-support/index.js"
+    },
+    "./addon-main.js": "./addon-main.cjs"
   },
   "files": [
     "addon-main.cjs",
+    "declarations",
     "dist"
   ],
   "dependencies": {
@@ -50,12 +62,13 @@
     "@babel/plugin-transform-typescript": "^7.22.15",
     "@babel/preset-typescript": "^7.23.2",
     "@embroider/addon-dev": "^4.1.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@tsconfig/ember": "^3.0.1",
     "concurrently": "^8.0.1",
     "ember-cli": "~5.3.0",
     "ember-cli-dependency-checker": "^3.3.1",
     "ember-resolver": "^11.0.1",
-    "ember-try": "^3.0.0",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-ember": "^11.4.9",
@@ -64,7 +77,6 @@
     "eslint-plugin-qunit": "^8.0.1",
     "prettier": "^3.0.3",
     "rollup": "^4.1.4",
-    "rollup-plugin-ts": "^3.4.5",
     "typescript": "^5.0.3"
   },
   "peerDependencies": {
@@ -72,16 +84,13 @@
     "qunit": "^2.0.0",
     "sinon": "^15.0.3 || ^16.0.0"
   },
-  "engines": {
-    "node": "14.* || 16.* || >= 18"
-  },
   "typesVersions": {
-    ">=5.0.0": {
+    "*": {
       "*": [
-        "dist/*"
+        "declarations/*"
       ],
       "test-support": [
-        "dist/test-support/index.d.ts"
+        "declarations/test-support/index.d.ts"
       ]
     }
   },

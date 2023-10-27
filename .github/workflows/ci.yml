@@ -23,8 +23,6 @@ jobs:
         uses: volta-cli/action@v4
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
-      - name: Build v2 Addon
-        run: yarn workspace ember-sinon-qunit run build
       - name: Lint
         run: yarn lint
       - name: Run Tests
@@ -41,8 +39,6 @@ jobs:
         uses: volta-cli/action@v4
       - name: Install Dependencies
         run: yarn install --no-lockfile
-      - name: Build v2 Addon
-        run: yarn workspace ember-sinon-qunit run build
       - name: Run Tests
         run: yarn test:ember
 
@@ -75,7 +71,5 @@ jobs:
         uses: volta-cli/action@v4
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
-      - name: Build v2 Addon
-        run: yarn workspace ember-sinon-qunit run build
       - name: Run Tests
         run: yarn workspace test-app run ember try:one ${{ matrix.try-scenario }}

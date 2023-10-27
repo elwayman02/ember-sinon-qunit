@@ -1,5 +1,8 @@
-import sinon, { SinonFakeTimers, SinonSandbox } from 'sinon';
-import { FakeTimerInstallOpts } from '@sinonjs/fake-timers';
+import sinon from 'sinon';
+import type { SinonFakeTimers, SinonSandbox, SinonSandboxConfig } from 'sinon';
+
+type FakeTimerInstallOpts =
+  SinonSandboxConfig['useFakeTimers'] extends boolean | Partial<infer A> ? A : never;
 
 let originalUseFakeTimers: SinonSandbox['useFakeTimers'];
 let clockToRestore: SinonSandbox['clock'] | null;

@@ -4,6 +4,7 @@
 /dist/
 /tmp/
 /test-support/
+/declarations/
 
 # dependencies
 /bower_components/
