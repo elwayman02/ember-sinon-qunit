@@ -5,6 +5,21 @@
 
 
 
+
+## v7.3.0 (2023-10-30)
+
+#### :rocket: Enhancement
+* [#909](https://github.com/elwayman02/ember-sinon-qunit/pull/909) Expand sinon peerDep to 17 ([@Techn1x](https://github.com/Techn1x))
+
+#### :house: Internal
+* [#907](https://github.com/elwayman02/ember-sinon-qunit/pull/907) Separate addon and test app with into Monorepo ([@vstefanovic97](https://github.com/vstefanovic97))
+* [#906](https://github.com/elwayman02/ember-sinon-qunit/pull/906) Use Node 18 in CI ([@elwayman02](https://github.com/elwayman02))
+
+#### Committers: 3
+- Brad Overton ([@Techn1x](https://github.com/Techn1x))
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+- Vuk ([@vstefanovic97](https://github.com/vstefanovic97))
+
 ## v7.2.0 (2023-10-12)
 
 #### :rocket: Enhancement
