@@ -38,13 +38,14 @@ To use, import the setup method into your `tests/test-helper.js` file and execut
 ```js
 import { setApplication } from '@ember/test-helpers';
 import { start } from 'ember-qunit';
+import * as QUnit from 'qunit';
 import Application from '../app';
 import config from '../config/environment';
 import setupSinon from 'ember-sinon-qunit';
 
 setApplication(Application.create(config.APP));
 
-setupSinon();
+setupSinon(QUnit);
 
 start();
 ```

@@ -1,1 +1,1 @@
-export default function setupSinon(testEnvironment?: QUnit): void;
+export default function setupSinon(testEnvironment): void;

@@ -1,5 +1,4 @@
 import { createSandbox, restoreSandbox } from './sinon-sandbox';
-import * as QUnit from 'qunit';
 
 /**
  * Allows for creating and restoring a global sinon sandbox per test. This is
@@ -9,7 +8,7 @@ import * as QUnit from 'qunit';
  * @param {Object} An object containing optional options
  * @public
  */
-export default function setupSinon(testEnvironment = QUnit) {
+export default function setupSinon(testEnvironment: any) {
   testEnvironment.testStart(createSandbox);
   testEnvironment.testDone(restoreSandbox);
 }
