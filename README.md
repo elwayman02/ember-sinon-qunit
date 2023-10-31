@@ -1,6 +1,6 @@
 # Ember Sinon QUnit
 
-[![Build Status](https://travis-ci.org/elwayman02/ember-sinon-qunit.svg?branch=master)](https://travis-ci.org/elwayman02/ember-sinon-qunit)
+[![Build Status](https://github.com/elwayman02/ember-sinon-qunit/actions/workflows/ci.yml/badge.svg)](https://github.com/elwayman02/ember-sinon-qunit/actions/workflows/ci.yml)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-sinon-qunit.svg)](http://emberobserver.com/addons/ember-sinon-qunit)
 [![Code Climate](https://codeclimate.com/github/elwayman02/ember-sinon-qunit/badges/gpa.svg)](https://codeclimate.com/github/elwayman02/ember-sinon-qunit)
 [![Codacy Badge](https://api.codacy.com/project/badge/8c6fbb028801423fbd4b1bfe17c9b1a0)](https://www.codacy.com/app/hawker-jordan/ember-sinon-qunit)
