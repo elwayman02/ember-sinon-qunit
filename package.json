@@ -16,10 +16,11 @@
     "Steve Calvert <steve.calvert@gmail.com>"
   ],
   "scripts": {
-    "build": "yarn workspace test-app build",
+    "build": "yarn workspace ember-sinon-qunit build",
     "changelog": "lerna-changelog",
     "lint": "yarn workspaces run lint",
     "lint:fix": "yarn workspaces run lint:fix",
+    "prepare": "yarn run build",
     "start": "yarn workspace test-app start",
     "test": "yarn workspace test-app run test",
     "test:ember": "yarn workspace test-app run test:ember",

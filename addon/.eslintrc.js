@@ -32,12 +32,9 @@ module.exports = {
       files: [
         './.eslintrc.js',
         './.prettierrc.js',
-        './.template-lintrc.js',
-        './ember-cli-build.js',
-        './index.js',
-        './testem.js',
-        './blueprints/*/index.js',
-        './config/**/*.js',
+        './addon-main.cjs',
+        './babel.config.cjs',
+        './rollup.config.mjs',
       ],
       parserOptions: {
         sourceType: 'script',

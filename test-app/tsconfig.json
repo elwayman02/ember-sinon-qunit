@@ -30,9 +30,6 @@
   "include": [
     "app/**/*",
     "tests/**/*",
-    "types/**/*",
-    "test-support/**/*",
-    "addon/addon-test-support/**/*",
-    "config",
+    "types/**/*"
   ]
 }

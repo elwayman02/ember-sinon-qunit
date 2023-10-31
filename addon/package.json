@@ -21,34 +21,54 @@
     "test": "tests"
   },
   "scripts": {
-    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
-    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
-    "lint:hbs": "ember-template-lint .",
-    "lint:hbs:fix": "ember-template-lint . --fix",
+    "build": "concurrently 'npm:build:*'",
+    "build:js": "rollup --config",
+    "build:types": "tsc --noEmit false --emitDeclarationOnly",
+    "lint": "concurrently 'npm:lint:*(!fix)' --names 'lint:'",
+    "lint:fix": "concurrently 'npm:lint:*:fix' --names 'fix:'",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
-    "prepack": "ember ts:precompile",
-    "postpack": "ember ts:clean"
+    "lint:types": "tsc",
+    "start": "concurrently 'npm:start:*'",
+    "start:js": "rollup --config --watch --no-watch.clearScreen",
+    "start:types": "tsc --noEmit false --emitDeclarationOnly --watch",
+    "test": "echo 'A v2 addon does not have tests, run tests in test-app'",
+    "prepack": "rollup --config"
   },
+  "exports": {
+    ".": {
+      "types": "./declarations/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./test-support": {
+      "types": "./declarations/test-support/index.d.ts",
+      "default": "./dist/test-support/index.js"
+    },
+    "./addon-main.js": "./addon-main.cjs"
+  },
+  "files": [
+    "addon-main.cjs",
+    "declarations",
+    "dist"
+  ],
   "dependencies": {
-    "@types/sinon": "^10.0.19",
-    "broccoli-funnel": "^3.0.8",
-    "ember-auto-import": "^2.6.3",
-    "ember-cli-babel": "^8.2.0",
-    "ember-cli-typescript": "^5.2.1"
+    "@embroider/addon-shim": "^1.8.6",
+    "@types/sinon": "^10.0.19"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.23.2",
+    "@babel/plugin-transform-typescript": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.2",
+    "@embroider/addon-dev": "^4.1.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@tsconfig/ember": "^3.0.1",
     "concurrently": "^8.0.1",
     "ember-cli": "~5.3.0",
     "ember-cli-dependency-checker": "^3.3.1",
-    "ember-cli-htmlbars": "^6.2.0",
-    "ember-cli-inject-live-reload": "^2.1.0",
-    "ember-cli-sri": "^2.1.1",
-    "ember-cli-terser": "^4.0.2",
-    "ember-load-initializers": "^2.1.2",
     "ember-resolver": "^11.0.1",
-    "ember-try": "^3.0.0",
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-ember": "^11.4.9",
@@ -56,6 +76,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-qunit": "^8.0.1",
     "prettier": "^3.0.3",
+    "rollup": "^4.1.4",
     "typescript": "^5.0.3"
   },
   "peerDependencies": {
@@ -63,14 +84,24 @@
     "qunit": "^2.0.0",
     "sinon": "^15.0.3 || ^16.0.0 || ^17.0.0"
   },
-  "engines": {
-    "node": "14.* || 16.* || >= 18"
+  "typesVersions": {
+    "*": {
+      "*": [
+        "declarations/*"
+      ],
+      "test-support": [
+        "declarations/test-support/index.d.ts"
+      ]
+    }
   },
   "ember": {
     "edition": "octane"
   },
-  "ember-addon": {},
-  "types": "types/index.d.ts",
+  "ember-addon": {
+    "main": "addon-main.cjs",
+    "type": "addon",
+    "version": 2
+  },
   "volta": {
     "extends": "../package.json"
   }

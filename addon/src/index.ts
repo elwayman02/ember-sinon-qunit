@@ -1,4 +1,4 @@
-import { createSandbox, restoreSandbox } from './sinon-sandbox';
+import { createSandbox, restoreSandbox } from './test-support';
 import * as QUnit from 'qunit';
 
 /**

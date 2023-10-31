@@ -1,12 +1,12 @@
 import { typeOf } from '@ember/utils';
-import {
+import type {
   SinonFake,
   SinonSpy,
   SinonStub,
   SinonSandbox,
   SinonSandboxConfig,
 } from 'sinon';
-import { TestContext } from '@ember/test-helpers';
+import type { TestContext } from '@ember/test-helpers';
 
 const obj = {
   foo() {},
