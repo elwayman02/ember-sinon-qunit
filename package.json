@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@release-it-plugins/lerna-changelog": "^6.0.0",
+    "@release-it-plugins/workspaces": "^4.0.0",
     "concurrently": "^8.2.1",
     "release-it": "^16.2.1"
   },
@@ -36,6 +37,16 @@
       "@release-it-plugins/lerna-changelog": {
         "infile": "CHANGELOG.md",
         "launchEditor": false
+      },
+      "@release-it-plugins/workspaces": {
+        "workspaces": [
+          "addon"
+        ],
+        "additionalManifests": {
+          "dependencyUpdates": [
+            "test-app/package.json"
+          ]
+        }
       }
     },
     "git": {
