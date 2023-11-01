@@ -1,5 +1,24 @@
 # Changelog
 
+
+## v7.4.0 (2023-11-01)
+
+#### :rocket: Enhancement
+* [#908](https://github.com/elwayman02/ember-sinon-qunit/pull/908) convert addon to v2 ([@vstefanovic97](https://github.com/vstefanovic97))
+
+#### :memo: Documentation
+* [#916](https://github.com/elwayman02/ember-sinon-qunit/pull/916) Update Build Status badge inREADME ([@SergeAstapov](https://github.com/SergeAstapov))
+
+#### :house: Internal
+* [#918](https://github.com/elwayman02/ember-sinon-qunit/pull/918) Simplify release-it setup ([@elwayman02](https://github.com/elwayman02))
+* [#915](https://github.com/elwayman02/ember-sinon-qunit/pull/915) Update release-it setup to account for workspaces ([@SergeAstapov](https://github.com/SergeAstapov))
+* [#908](https://github.com/elwayman02/ember-sinon-qunit/pull/908) convert addon to v2 ([@vstefanovic97](https://github.com/vstefanovic97))
+
+#### Committers: 3
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+- Sergey Astapov ([@SergeAstapov](https://github.com/SergeAstapov))
+- Vuk ([@vstefanovic97](https://github.com/vstefanovic97))
+
 ## v7.3.0 (2023-10-30)
 
 #### :rocket: Enhancement
