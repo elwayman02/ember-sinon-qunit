@@ -38,16 +38,7 @@
         "infile": "CHANGELOG.md",
         "launchEditor": false
       },
-      "@release-it-plugins/workspaces": {
-        "workspaces": [
-          "addon"
-        ],
-        "additionalManifests": {
-          "dependencyUpdates": [
-            "test-app/package.json"
-          ]
-        }
-      }
+      "@release-it-plugins/workspaces": true
     },
     "git": {
       "tagName": "v${version}"
@@ -55,16 +46,7 @@
     "github": {
       "release": true,
       "tokenRef": "GITHUB_AUTH"
-    }
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "engines": {
-    "node": "14.* || 16.* || >= 18"
-  },
-  "volta": {
-    "node": "18.18.2",
-    "yarn": "1.22.19"
+    },
+    "npm": false
   }
 }
