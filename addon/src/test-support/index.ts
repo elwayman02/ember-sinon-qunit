@@ -1,1 +1,1 @@
-export { createSandbox , restoreSandbox } from './sinon-sandbox';
+export { createSandbox, restoreSandbox } from './sinon-sandbox.ts';

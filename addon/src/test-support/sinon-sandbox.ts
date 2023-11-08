@@ -1,8 +1,11 @@
 import sinon from 'sinon';
 import type { SinonFakeTimers, SinonSandbox, SinonSandboxConfig } from 'sinon';
 
-type FakeTimerInstallOpts =
-  SinonSandboxConfig['useFakeTimers'] extends boolean | Partial<infer A> ? A : never;
+type FakeTimerInstallOpts = SinonSandboxConfig['useFakeTimers'] extends
+  | boolean
+  | Partial<infer A>
+  ? A
+  : never;
 
 let originalUseFakeTimers: SinonSandbox['useFakeTimers'];
 let clockToRestore: SinonSandbox['clock'] | null;
@@ -44,11 +47,11 @@ export function restoreSandbox() {
 function patchUseFakeTimers(sandbox: SinonSandbox) {
   originalUseFakeTimers = sandbox.useFakeTimers;
   sandbox.useFakeTimers = function (
-    config?: number | Date | Partial<FakeTimerInstallOpts>
+    config?: number | Date | Partial<FakeTimerInstallOpts>,
   ): SinonFakeTimers {
     if (clockToRestore) {
       throw new Error(
-        "You called sinon's useFakeTimers multiple times within the same test. This can result in unknown behavior."
+        "You called sinon's useFakeTimers multiple times within the same test. This can result in unknown behavior.",
       );
     }
     const clock = originalUseFakeTimers.apply(sandbox, [config]);

@@ -84,7 +84,7 @@ export default function assertSinonInTestContext(test: QUnit['test']) {
     assert.equal(
       typeOf(this.replaceGetter),
       'function',
-      'replaceGetter exists'
+      'replaceGetter exists',
     );
 
     const thing = {
@@ -104,7 +104,7 @@ export default function assertSinonInTestContext(test: QUnit['test']) {
     assert.equal(
       typeOf(this.replaceSetter),
       'function',
-      'replaceSetter exists'
+      'replaceSetter exists',
     );
 
     const thing = {
@@ -125,7 +125,7 @@ export default function assertSinonInTestContext(test: QUnit['test']) {
     assert.equal(
       this.sandbox.injectInto,
       this,
-      'sandbox was injected into context'
+      'sandbox was injected into context',
     );
     const keys = this.sandbox.injectedKeys;
     assert.equal(keys.length, 4, '4 keys were injected');

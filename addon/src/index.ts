@@ -1,4 +1,4 @@
-import { createSandbox, restoreSandbox } from './test-support';
+import { createSandbox, restoreSandbox } from './test-support/index.ts';
 import * as QUnit from 'qunit';
 
 /**
