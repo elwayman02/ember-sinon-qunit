@@ -44,7 +44,7 @@ module(`Unit | ember-sinon-qunit`, function () {
 
     createSandbox();
 
-    let clock = sinon.useFakeTimers();
+    const clock = sinon.useFakeTimers();
 
     assert.ok(
       clock,
@@ -59,7 +59,7 @@ module(`Unit | ember-sinon-qunit`, function () {
 
     createSandbox();
 
-    let clock = sinon.useFakeTimers();
+    const clock = sinon.useFakeTimers();
 
     clock.tick(10000);
 

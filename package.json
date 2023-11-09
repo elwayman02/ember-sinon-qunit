@@ -20,8 +20,10 @@
     "changelog": "lerna-changelog",
     "lint": "yarn workspaces run lint",
     "lint:fix": "yarn workspaces run lint:fix",
-    "prepare": "yarn run build",
-    "start": "yarn workspace test-app start",
+    "prepare": "yarn build",
+    "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
+    "start:addon": "yarn workspace ember-sinon-qunit run start",
+    "start:test-app": "yarn workspace test-app run start",
     "test": "yarn workspace test-app run test",
     "test:ember": "yarn workspace test-app run test:ember",
     "test:ember-compatibility": "yarn workspace test-app run test:ember-compatibility"

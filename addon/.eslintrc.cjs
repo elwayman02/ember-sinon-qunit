@@ -2,19 +2,9 @@
 
 module.exports = {
   root: true,
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2022,
-    sourceType: 'module',
-    requireConfigFile: false,
-    babelOptions: {
-      plugins: [
-        [
-          '@babel/plugin-proposal-decorators',
-          { decoratorsBeforeExport: true, version: '2018-09' },
-        ],
-      ],
-    },
+    ecmaVersion: 'latest',
   },
   plugins: ['ember'],
   extends: [
@@ -27,13 +17,24 @@ module.exports = {
   },
   rules: {},
   overrides: [
+    // ts files
+    {
+      files: ['**/*.ts', '**/*.gts'],
+      extends: [
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+      ],
+      rules: {
+        // Add any custom rules here
+        'ember/no-test-support-import': 'off',
+      },
+    },
     // node files
     {
       files: [
-        './.eslintrc.js',
-        './.prettierrc.js',
+        './.eslintrc.cjs',
+        './.prettierrc.cjs',
         './addon-main.cjs',
-        './babel.config.cjs',
         './rollup.config.mjs',
       ],
       parserOptions: {
@@ -43,6 +44,7 @@ module.exports = {
         browser: false,
         node: true,
       },
+      plugins: ['n'],
       extends: ['plugin:n/recommended'],
     },
   ],
