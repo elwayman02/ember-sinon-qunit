@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.8.6",
-    "@types/sinon": "^17.0.0"
+    "@types/sinon": "^17.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
