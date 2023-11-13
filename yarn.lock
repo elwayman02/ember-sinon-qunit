@@ -1270,14 +1270,14 @@
     ember-cli-version-checker "^5.1.2"
     semver "^7.3.5"
 
-"@embroider/addon-dev@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@embroider/addon-dev/-/addon-dev-4.1.1.tgz#c02afd5e013e09beb8fec61c9d005cee58b1421d"
-  integrity sha512-6AIU+GobgsozQJZtG6ys/8TumtnJkrW8LKggjajCwX8QP++eAN9vUL00AZdgh5wZAyLAiv+jNi5knGrPdMFPMA==
+"@embroider/addon-dev@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@embroider/addon-dev/-/addon-dev-4.1.2.tgz#72575ef8dd6d2983fac7d2078cd1ae890d0dcc85"
+  integrity sha512-yvL5Vmfh6oQ5m6qP83eZIkD6/RUtWIrW46gtAZvAPCm+HzjFTYHDlldzgYOxUa7k1g2mWrfJOtzBRqqBsogoSw==
   dependencies:
-    "@embroider/core" "^3.3.0"
+    "@embroider/core" "^3.4.0"
     "@rollup/pluginutils" "^4.1.1"
-    content-tag "^1.0.0"
+    content-tag "^1.1.2"
     fs-extra "^10.0.0"
     minimatch "^3.0.4"
     rollup-plugin-copy-assets "^2.0.3"
@@ -1294,16 +1294,16 @@
     broccoli-funnel "^3.0.8"
     semver "^7.3.8"
 
-"@embroider/core@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@embroider/core/-/core-3.3.0.tgz#ebdce3abd7d74e0f348643af355687516df37e79"
-  integrity sha512-QkOLFB3DUuDg6DU7qNAKFNJUyzgmjWNiRLcyrhThYgWeN5h8ilatG3sl5atBN6Jh3wCIJmhjXagafkA82a0abQ==
+"@embroider/core@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@embroider/core/-/core-3.4.0.tgz#84d8a2a558536efc38a81e9f19cc84ce1d633aa9"
+  integrity sha512-0tLoyOfiNPLwd9Hhz8rk7nozPwbH8NhYcDwc14CyBbFbEqjjELnSeba9yebeGBzt7ACj0osm2O9FBY4iR9LEZQ==
   dependencies:
     "@babel/core" "^7.14.5"
     "@babel/parser" "^7.14.5"
     "@babel/traverse" "^7.14.5"
-    "@embroider/macros" "1.13.2"
-    "@embroider/shared-internals" "2.5.0"
+    "@embroider/macros" "1.13.3"
+    "@embroider/shared-internals" "2.5.1"
     assert-never "^1.2.1"
     babel-plugin-ember-template-compilation "^2.1.1"
     broccoli-node-api "^1.7.0"
@@ -1324,7 +1324,21 @@
     typescript-memoize "^1.0.1"
     walk-sync "^3.0.0"
 
-"@embroider/macros@1.13.2", "@embroider/macros@^1.0.0", "@embroider/macros@^1.10.0", "@embroider/macros@^1.13.1", "@embroider/macros@^1.8.3":
+"@embroider/macros@1.13.3":
+  version "1.13.3"
+  resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-1.13.3.tgz#e1ff584e01bcdebb9fa9f6982ecc2ea89886867f"
+  integrity sha512-JUC1aHRLIN2LNy1l+gz7gWkw9JmnsE20GL3LduCzNvCAnEQpMTJhW5BUbEWqdCnAWBPte/M2ofckqBXyTZioTQ==
+  dependencies:
+    "@embroider/shared-internals" "2.5.1"
+    assert-never "^1.2.1"
+    babel-import-util "^2.0.0"
+    ember-cli-babel "^7.26.6"
+    find-up "^5.0.0"
+    lodash "^4.17.21"
+    resolve "^1.20.0"
+    semver "^7.3.2"
+
+"@embroider/macros@^1.0.0", "@embroider/macros@^1.10.0", "@embroider/macros@^1.13.1", "@embroider/macros@^1.8.3":
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-1.13.2.tgz#07dda11313a2539f403404881b729e622a80ca17"
   integrity sha512-AUgJ71xG8kjuTx8XB1AQNBiebJuXRfhcHr318dCwnQz9VRXdYSnEEqf38XRvGYIoCvIyn/3c72LrSwzaJqknOA==
@@ -1342,6 +1356,21 @@
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-2.5.0.tgz#4a0b5127c589718fae60fc22f81374ed558b944a"
   integrity sha512-7qzrb7GVIyNqeY0umxoeIvjDC+ay1b+wb2yCVuYTUYrFfLAkLEy9FNI3iWCi3RdQ9OFjgcAxAnwsAiPIMZZ3pQ==
+  dependencies:
+    babel-import-util "^2.0.0"
+    debug "^4.3.2"
+    ember-rfc176-data "^0.3.17"
+    fs-extra "^9.1.0"
+    js-string-escape "^1.0.1"
+    lodash "^4.17.21"
+    resolve-package-path "^4.0.1"
+    semver "^7.3.5"
+    typescript-memoize "^1.0.1"
+
+"@embroider/shared-internals@2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-2.5.1.tgz#a4d8c057cbff293ef6eb29ee6537f263d206b444"
+  integrity sha512-b+TWDBisH1p6HeTbJIO8pgu1WzfTP0ZSAlZBqjXwOyrS0ZxP1qNYRrEX+IxyzIibEFjXBxeLakiejz3DJvZX5A==
   dependencies:
     babel-import-util "^2.0.0"
     debug "^4.3.2"
@@ -4741,7 +4770,7 @@ content-disposition@0.5.4:
   dependencies:
     safe-buffer "5.2.1"
 
-content-tag@^1.0.0:
+content-tag@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/content-tag/-/content-tag-1.1.2.tgz#a7adddfdd2d44c9418b795c91ee04c55f570a997"
   integrity sha512-AZkfc6TUmW+/RbZJioPzOQPAHHXqyqK4B0GNckJDjBAPK3SyGrMfn21bfFky/qwi5uoLph5sjAHUkO3CL6/IgQ==
