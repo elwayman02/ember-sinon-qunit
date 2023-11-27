@@ -66,7 +66,7 @@
     "@types/ember__test": "^4.0.4",
     "@types/ember__utils": "^4.0.5",
     "@types/qunit": "^2.19.9",
-    "@types/rsvp": "^4.0.6",
+    "@types/rsvp": "^4.0.8",
     "@types/sinon": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
     "@typescript-eslint/parser": "^6.12.0",
