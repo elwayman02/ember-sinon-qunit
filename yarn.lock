@@ -2193,10 +2193,10 @@
   dependencies:
     "@types/ms" "*"
 
-"@types/ember-data@*", "@types/ember-data@^4.4.13":
-  version "4.4.14"
-  resolved "https://registry.yarnpkg.com/@types/ember-data/-/ember-data-4.4.14.tgz#aee6991e64de99dc14fa821310992812d2eb5f9a"
-  integrity sha512-w2lWrzP0ROdya+0dUqs8DN8l2iPPZUtB+H8+OFhsnqKLO3oxaGK9XtbcCn7qjYh2UEExEbj8M8SgkR6/c3Sagg==
+"@types/ember-data@*", "@types/ember-data@^4.4.15":
+  version "4.4.15"
+  resolved "https://registry.yarnpkg.com/@types/ember-data/-/ember-data-4.4.15.tgz#d2911e69de197e4352925f7be74cc460babf5c81"
+  integrity sha512-WxmpROfS/PHCB0ch5fKzGYAWYduNN5U4sg/XIshvq1PksXq5VdxG1IIAZySstjY87CMBUE6HD6x/j+7DMEQwBQ==
   dependencies:
     "@types/ember" "*"
     "@types/ember__error" "*"
