@@ -2200,10 +2200,10 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/quickjs-emscripten/-/quickjs-emscripten-0.23.0.tgz#db4ecfd499a9765ab24002c3b696d02e6d32a12c"
   integrity sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==
 
-"@tsconfig/ember@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@tsconfig/ember/-/ember-3.0.2.tgz#d1ee5a734c5fa1b039d35a93055edadf816aa16f"
-  integrity sha512-Whab2JuEA9r1RLke13tKWO7F95C7l3ivwVhxC37v98vOtFOmDA2BisY/6Fnhclmyydc5vOuVPwN3hi8UTboahw==
+"@tsconfig/ember@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@tsconfig/ember/-/ember-3.0.3.tgz#30df35f454e894ae467c626d5ffe4d1f2d2fb387"
+  integrity sha512-StVVkcg/VxA+eDzBcTQAcnmmcmg1OxaV41OqFYluqVHpUX28TOD91DGg58n2AMU9ia27zeBBeVQiLsfmzuIV7w==
 
 "@types/acorn@^4.0.3":
   version "4.0.6"
