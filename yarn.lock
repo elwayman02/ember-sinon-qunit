@@ -1674,10 +1674,10 @@
     "@glimmer/interfaces" "0.84.3"
     "@glimmer/util" "0.84.3"
 
-"@glint/environment-ember-loose@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@glint/environment-ember-loose/-/environment-ember-loose-1.2.1.tgz#6edcf1833395597c667e427172f20e74d72cdfe3"
-  integrity sha512-ZA0Ht7vwd1FosVLtMFrB2Er62P1v6yX/UuS6z9UVR6DMPfrL5qx6vef+EGJPLBrBKZMlm7zMB6Fyca201y4hDA==
+"@glint/environment-ember-loose@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@glint/environment-ember-loose/-/environment-ember-loose-1.2.2.tgz#4c687d81ee5ecce3507e385e71e1d1c9ed1189ce"
+  integrity sha512-qsKDBmn84eDv0wVVvYToxMat5kvG9zMygwmmOsdShZ5g/HgostOhnISAM+WG6bMNu30OjxLnCHX/e8pgWAfWAg==
 
 "@glint/template@^1.2.1":
   version "1.2.1"
