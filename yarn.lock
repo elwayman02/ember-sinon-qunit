@@ -2535,10 +2535,10 @@
     "@types/ember__owner" "*"
     "@types/ember__routing" "*"
 
-"@types/ember__array@*", "@types/ember__array@^4.0.9":
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/@types/ember__array/-/ember__array-4.0.9.tgz#6a2e3552b5d31be46b8cda9886389a7f0a9e32e5"
-  integrity sha512-c1ifxQyYxRY9DLrSD5H0O4yhqQNGpMzxeE8ZDVUFNJePaheHnkkhOcgSozRvAexpWkYU33QgZO/331KaZGY7BQ==
+"@types/ember__array@*", "@types/ember__array@^4.0.10":
+  version "4.0.10"
+  resolved "https://registry.yarnpkg.com/@types/ember__array/-/ember__array-4.0.10.tgz#948bb232722095673e94e971337f4aeebbef6190"
+  integrity sha512-UrhDbopLI3jB0MqV14y8yji2IuPNmeDrtT1PRYJL4CThLHrRkfeYyFvxqvrxWxn0wXKjbbjfH1gOe7BU57QrLQ==
   dependencies:
     "@types/ember" "*"
     "@types/ember__object" "*"
