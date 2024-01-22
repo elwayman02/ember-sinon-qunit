@@ -2827,10 +2827,10 @@
     "@types/glob" "*"
     "@types/node" "*"
 
-"@types/rsvp@*", "@types/rsvp@^4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@types/rsvp/-/rsvp-4.0.8.tgz#79fb4525d7e4c22322bbbee2648fcbf2d6bbb2f8"
-  integrity sha512-OraQXMlBrD3nll0VuEKENY3IoR4N3eDIqElVWo5dSheMveYYMDSIUMbtcI7wOGWyUilLwfaOx9VF8U8LdrHXkg==
+"@types/rsvp@*", "@types/rsvp@^4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@types/rsvp/-/rsvp-4.0.9.tgz#7d9d07c1a2fa82c808eca37757cc6a20272a4b66"
+  integrity sha512-F6vaN5mbxw2MBCu/AD9fSKwrhnto2pE77dyUsi415qz9IP9ni9ZOWXHxnXfsM4NW9UjW+it189jvvqnhv37Z7Q==
 
 "@types/semver@^7.5.0":
   version "7.5.5"
