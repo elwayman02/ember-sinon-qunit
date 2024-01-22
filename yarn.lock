@@ -2636,10 +2636,10 @@
   dependencies:
     "@types/ember" "*"
 
-"@types/ember__service@*", "@types/ember__service@^4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@types/ember__service/-/ember__service-4.0.8.tgz#3f5ca8e87d9a1e154e6fdafcb6ea3ed610344967"
-  integrity sha512-LKPDKA8eG0pN0p7QMwW6DW87vO0WA5EjzLOjR2lZkWhxIqKUbHAQF32BdlyZkPL+DxAE4q0DqrbLAWAgT21hQQ==
+"@types/ember__service@*", "@types/ember__service@^4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@types/ember__service/-/ember__service-4.0.9.tgz#8b15a14843026854df73bb8c2d45c11551ea4dde"
+  integrity sha512-DrepocL/4hH5YxbDWbxEKMDcAchBPSGGa4g+LEINW1Po81RmSdKw5GZV4UO0mvRWgkdu3EbWUxbTzB4gmbDSeQ==
   dependencies:
     "@types/ember__object" "*"
 
