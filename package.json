@@ -29,7 +29,7 @@
     "test:ember-compatibility": "yarn workspace test-app run test:ember-compatibility"
   },
   "devDependencies": {
-    "@release-it-plugins/lerna-changelog": "^6.0.0",
+    "@release-it-plugins/lerna-changelog": "^6.1.0",
     "@release-it-plugins/workspaces": "^4.0.0",
     "concurrently": "^8.2.1",
     "release-it": "^16.3.0"
