@@ -2479,10 +2479,10 @@
   dependencies:
     "@types/ember-data" "*"
 
-"@types/ember-data__model@^4.0.3":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@types/ember-data__model/-/ember-data__model-4.0.4.tgz#21126d3af88a0f626a56197a0b556d094a85f7b3"
-  integrity sha512-dlQ5AImN5YvAYpLPHc29sDhH7Jt+34OHfb9errkcXxpzBgusFxNBAUKOSpNuyqJBb9sEduPq0HuugW4trA9gpg==
+"@types/ember-data__model@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@types/ember-data__model/-/ember-data__model-4.0.5.tgz#f45194302e2b3c1b95288b2c3236f2b5e3cbc2cf"
+  integrity sha512-zyfHh3tQiMdpbPZ1/RFxi4m9TdwsZxDmVY0e7V1UYp7pWvm/DeqEXqoy3WS9xa/O01xoJFpQtJHyasdXvVTfbg==
   dependencies:
     "@types/ember-data" "*"
 
