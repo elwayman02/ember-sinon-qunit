@@ -2614,10 +2614,10 @@
   resolved "https://registry.yarnpkg.com/@types/ember__owner/-/ember__owner-4.0.8.tgz#55914f305ba26b47312cc0af91249a60d19989ec"
   integrity sha512-rBFFXjJpumFrw/cTNudU5gKIXYs34HoaMpGCfYiZ15tjrlLikW5QVFJqRtU7bOTL/Lj3pMm3xUGmrH8iFI/gyQ==
 
-"@types/ember__polyfills@*", "@types/ember__polyfills@^4.0.4":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@types/ember__polyfills/-/ember__polyfills-4.0.5.tgz#e9527cb9755aa7fe12b021d720561e5200975121"
-  integrity sha512-KOdgOFGCIMtBb6bMEsze7LDA2+h588qJCmFTsFBdicZFMX7lWg3hju5568bD7SXBpXvBF2a9a1Xv4fpNdRntWA==
+"@types/ember__polyfills@*", "@types/ember__polyfills@^4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@types/ember__polyfills/-/ember__polyfills-4.0.6.tgz#b6dd993a89470caeacc38a58822572dd2450de79"
+  integrity sha512-hbds3Qv+oVm/QKIaY1E6atvrCoJTH/MPSl4swOhX6P0RiMB2fOfFCrFSD1mP1KrU1LqpHJ2Rzs7XLe53SWVzgw==
 
 "@types/ember__routing@*", "@types/ember__routing@^4.0.19":
   version "4.0.19"
