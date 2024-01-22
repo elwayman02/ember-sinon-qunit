@@ -2609,10 +2609,10 @@
     "@types/ember" "*"
     "@types/rsvp" "*"
 
-"@types/ember__owner@*", "@types/ember__owner@^4.0.7":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@types/ember__owner/-/ember__owner-4.0.8.tgz#55914f305ba26b47312cc0af91249a60d19989ec"
-  integrity sha512-rBFFXjJpumFrw/cTNudU5gKIXYs34HoaMpGCfYiZ15tjrlLikW5QVFJqRtU7bOTL/Lj3pMm3xUGmrH8iFI/gyQ==
+"@types/ember__owner@*", "@types/ember__owner@^4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@types/ember__owner/-/ember__owner-4.0.9.tgz#6abe1d529a9969a461692848dfac375d395f209e"
+  integrity sha512-iyBda4aUIjBmeiKTKmPow/EJO7xWn8m85CnQTOCqQzTWJyJpgfObbXSHahOHXOfMm279Oa5NlbmS/EontB+XiQ==
 
 "@types/ember__polyfills@*", "@types/ember__polyfills@^4.0.6":
   version "4.0.6"
