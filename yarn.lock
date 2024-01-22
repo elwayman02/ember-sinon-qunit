@@ -2472,10 +2472,10 @@
     "@types/ember__object" "*"
     "@types/rsvp" "*"
 
-"@types/ember-data__adapter@^4.0.4":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@types/ember-data__adapter/-/ember-data__adapter-4.0.5.tgz#ea243171f841c18338fddbab5854f68b931dd259"
-  integrity sha512-PkDaHoh7FcfRn1RwNUhabTUi8YrKRowAepS2c7wtDaR0ManzfhG8IqW7QGXieUZtWofQ/I9tDx9kebD1hO8ntg==
+"@types/ember-data__adapter@^4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@types/ember-data__adapter/-/ember-data__adapter-4.0.6.tgz#ce42da525f8e55d0bf7b32d948e503471075fafc"
+  integrity sha512-vSrx1cqz8jO0cBYwu98SrwFk5s722C+BGpw++NregwQio3g9VbNoymx+HsYeXvsWvGUsoRewxu9K7TwAOJSsvw==
   dependencies:
     "@types/ember-data" "*"
 
