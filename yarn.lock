@@ -6061,10 +6061,10 @@ ember-modifier@^4.1.0:
     ember-cli-normalize-entity-name "^1.0.0"
     ember-cli-string-utils "^1.1.0"
 
-ember-page-title@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/ember-page-title/-/ember-page-title-8.2.0.tgz#1fbfcf3a8c29edd2b7ce6e9f0df25279b26db7b2"
-  integrity sha512-8t6kJ4V47BLccXH5I/0h86MG0TqwGi7UDxbLGn8yudg8Hit3iAkB3YrN2378uLUluYZM8KBxu1NsrMRsxhi48A==
+ember-page-title@^8.2.1:
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/ember-page-title/-/ember-page-title-8.2.1.tgz#eb686de76b8979494530cf9bf1f1162775cd85e5"
+  integrity sha512-B2c/mQgzJHcr88rSEroLmUUAX3agYCowOf7mPtZei6wYusWDXoDMLT8Wls75iDwaNOKsPa2cF/KxPJGBuKiOSQ==
   dependencies:
     "@embroider/addon-shim" "^1.8.7"
     "@simple-dom/document" "^1.4.0"
