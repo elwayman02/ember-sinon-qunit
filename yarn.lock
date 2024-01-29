@@ -2534,10 +2534,10 @@
   dependencies:
     "@types/ember-data" "*"
 
-"@types/ember@*", "@types/ember@^4.0.10":
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/@types/ember/-/ember-4.0.10.tgz#4ef730785fcbd1087d53173e9f9e48130214e863"
-  integrity sha512-wASNwm5qp7Q03Hr7cYUq1zhZ0k9nqqA5r/rWYwscax2sKwP2higNk+zy0hA+HhyweyNqYumwh9jZN9vxOyFaFA==
+"@types/ember@*", "@types/ember@^4.0.11":
+  version "4.0.11"
+  resolved "https://registry.yarnpkg.com/@types/ember/-/ember-4.0.11.tgz#3a624a8018ef4b0015a299ecf1481401d60ec18b"
+  integrity sha512-v7VIex0YILK8fP87LkIfzeeYKNnu74+xwf6U56v6MUDDGfSs9q/6NCxiUfwkxD+z5nQiUcwvfKVokX8qzZFRLw==
   dependencies:
     "@types/ember__application" "*"
     "@types/ember__array" "*"
