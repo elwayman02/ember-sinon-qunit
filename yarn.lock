@@ -2585,10 +2585,10 @@
     "@types/ember" "*"
     "@types/ember__object" "*"
 
-"@types/ember__controller@*", "@types/ember__controller@^4.0.11":
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/@types/ember__controller/-/ember__controller-4.0.11.tgz#3416ff326e99adf3d4c3dda0d21fb2b85b726a85"
-  integrity sha512-s8Ut84WJOD9/RGSkcAkwO2zXp3lfpg/Rh2Rk9T1UfxkFol5KYWaPpF7AhHI1P7fdVk8yU8MmylDH+ZOUsK/2zw==
+"@types/ember__controller@*", "@types/ember__controller@^4.0.12":
+  version "4.0.12"
+  resolved "https://registry.yarnpkg.com/@types/ember__controller/-/ember__controller-4.0.12.tgz#b8e3d9ffd6cd6091160f829a1cc8585a54580256"
+  integrity sha512-80rdnSC0UJBqoUX5/vkQcM2xkRdTPTvY0dPXEfY5cC5OZITbcSeRo5qa7ZGhgNBfH6XYyh55Lo/b811LwU3N9w==
   dependencies:
     "@types/ember__object" "*"
 
