@@ -2829,10 +2829,10 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/quickjs-emscripten/-/quickjs-emscripten-0.23.0.tgz#db4ecfd499a9765ab24002c3b696d02e6d32a12c"
   integrity sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==
 
-"@tsconfig/ember@^3.0.6":
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/@tsconfig/ember/-/ember-3.0.6.tgz#9a2c49e2801e544203ef572dce02ce84085e5cc1"
-  integrity sha512-b1LmFAL5suTpQsaoG5NYpKAU8XfqQcob9gPu4xQlS/sNGD8Pp+vx+jI30Cy01+mxTBsQPig2kOwFpTD2b2qwtw==
+"@tsconfig/ember@^3.0.7":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@tsconfig/ember/-/ember-3.0.7.tgz#8eb1effd7a3b35b7f26d9576d70d2c360cf5b0ac"
+  integrity sha512-T9H3VNlino2mo3wpAd9EqRwJyERvUKnJnIyiYuL7b3UvV+yQAt7f9np81liHpmBeBQ5z5NzegA5vJGpvCOtYsQ==
 
 "@types/acorn@^4.0.3":
   version "4.0.6"
