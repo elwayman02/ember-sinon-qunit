@@ -1481,7 +1481,7 @@
     typescript-memoize "^1.0.1"
     walk-sync "^3.0.0"
 
-"@embroider/macros@1.15.1":
+"@embroider/macros@1.15.1", "@embroider/macros@^1.0.0", "@embroider/macros@^1.10.0", "@embroider/macros@^1.13.1", "@embroider/macros@^1.13.5", "@embroider/macros@^1.8.3":
   version "1.15.1"
   resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-1.15.1.tgz#fbcd10f5df47243a1561445ec066f97e1a87649a"
   integrity sha512-l6rv4UVyQ+0XZbabpGXXUNpm7vMEVFzFwWnBeyKFLmmxuEQ4tgxEgR9qDRF/IWJXGS6na6pXN3jTk/cOaQiCpw==
@@ -1495,35 +1495,6 @@
     lodash "^4.17.21"
     resolve "^1.20.0"
     semver "^7.3.2"
-
-"@embroider/macros@^1.0.0", "@embroider/macros@^1.10.0", "@embroider/macros@^1.13.1", "@embroider/macros@^1.13.5", "@embroider/macros@^1.8.3":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-1.14.0.tgz#1be70aaeba05c5b3196bb161a2219695a9e5cc83"
-  integrity sha512-V+jkc8mU6mJ4McW6qdEhCiD74CzMDd1T4CeJ9IkidC3pPwTMRIKJMkbiSnjmGDy7NCxT66XtFwJH7HGM2B/fXA==
-  dependencies:
-    "@embroider/shared-internals" "2.5.2"
-    assert-never "^1.2.1"
-    babel-import-util "^2.0.0"
-    ember-cli-babel "^7.26.6"
-    find-up "^5.0.0"
-    lodash "^4.17.21"
-    resolve "^1.20.0"
-    semver "^7.3.2"
-
-"@embroider/shared-internals@2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-2.5.2.tgz#5cd49c6164147c68fe9d6994ef5cccb47e138bb4"
-  integrity sha512-jNDJ9YlV6Qp9Na9v17qirUewVuq6T0t32nn+bbnFlCRTvmllKluZdYPSC5RuRnEZKTloVYRSF0+f1rgkTIEvxQ==
-  dependencies:
-    babel-import-util "^2.0.0"
-    debug "^4.3.2"
-    ember-rfc176-data "^0.3.17"
-    fs-extra "^9.1.0"
-    js-string-escape "^1.0.1"
-    lodash "^4.17.21"
-    resolve-package-path "^4.0.1"
-    semver "^7.3.5"
-    typescript-memoize "^1.0.1"
 
 "@embroider/shared-internals@2.6.0", "@embroider/shared-internals@^2.0.0", "@embroider/shared-internals@^2.6.0":
   version "2.6.0"
@@ -6105,10 +6076,10 @@ electron-to-chromium@^1.4.648:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.648.tgz#c7b46c9010752c37bb4322739d6d2dd82354fbe4"
   integrity sha512-EmFMarXeqJp9cUKu/QEciEApn0S/xRcpZWuAm32U7NgoZCimjsilKXHRO9saeEW55eHZagIDg6XTUOv32w9pjg==
 
-ember-auto-import@^2.6.0, ember-auto-import@^2.6.3, ember-auto-import@^2.7.0, ember-auto-import@^2.7.2:
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-2.7.2.tgz#5e74b6a8839fab25e23af6cff6f74b1b424d8f25"
-  integrity sha512-pkWIljmJClYL17YBk8FjO7NrZPQoY9v0b+FooJvaHf/xlDQIBYVP7OaDHbNuNbpj7+wAwSDAnnwxjCoLsmm4cw==
+ember-auto-import@^2.6.0, ember-auto-import@^2.6.3, ember-auto-import@^2.7.0, ember-auto-import@^2.7.3:
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-2.7.3.tgz#08421f35cd9628327e1dd5d9df40673a1d7beb71"
+  integrity sha512-EQzStGYxNvTPYWCFh0X57HFAzAvA2rHHRgBeWNDKHQ/rENNlHw0c0e0i1XebwEfv+yGHOodE4dN+f/mrYkQXLw==
   dependencies:
     "@babel/core" "^7.16.7"
     "@babel/plugin-proposal-class-properties" "^7.16.7"
