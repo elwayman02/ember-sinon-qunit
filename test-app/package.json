@@ -104,7 +104,7 @@
     "prettier": "^3.3.2",
     "qunit": "^2.21.0",
     "qunit-dom": "^3.1.2",
-    "sinon": "^17.0.1",
+    "sinon": "^18.0.0",
     "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-prettier": "^5.0.0",
