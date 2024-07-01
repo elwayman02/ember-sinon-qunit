@@ -2527,10 +2527,10 @@
   resolved "https://registry.yarnpkg.com/@types/ember__error/-/ember__error-4.0.6.tgz#ff3b18fc8525c73f92828789bb4fed908e553df9"
   integrity sha512-vYrLaGGjHkN14K89Vm8yqB2mkpJQefE5w7QJkkgYyV+smzns1vKlPbvuFevRtoeYNn4u4yY0JyF7HceNkm3H0Q==
 
-"@types/ember__helper@^4.0.7":
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/@types/ember__helper/-/ember__helper-4.0.7.tgz#c88652b0ef1647312b15193034819872683c59d0"
-  integrity sha512-Na7Bh1wBxb2n62ZL/ZHczrwRWyYCyl+udt/blnPYHHdZhnCu0qc3nDpVUoS3yF/LWfIGKX66739Kv2gpDMAIOw==
+"@types/ember__helper@^4.0.8":
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/@types/ember__helper/-/ember__helper-4.0.8.tgz#5f2d292f7127946d39f5283c5d13399c45c90506"
+  integrity sha512-IhHkZHmwPx7zjabIr315qpQwgje+ASq5y6If1ZtRSwjm/0rL2Qa9FQu+h4cYW5jWdn2ptJ1pZZJTCe2uEVxsIQ==
   dependencies:
     "@glimmer/manager" ">= 0.83.0"
     "@glimmer/runtime" ">= 0.83.0"
