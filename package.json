@@ -32,7 +32,7 @@
     "@release-it-plugins/lerna-changelog": "^7.0.0",
     "@release-it-plugins/workspaces": "^4.2.0",
     "concurrently": "^8.2.1",
-    "release-it": "^17.4.0"
+    "release-it": "^17.4.1"
   },
   "release-it": {
     "hooks": {
