@@ -78,12 +78,7 @@ module.exports = {
     },
     // node files
     {
-      files: [
-        './.eslintrc.cjs',
-        './.prettierrc.cjs',
-        './addon-main.cjs',
-        './rollup.config.mjs',
-      ],
+      files: ['./.eslintrc.cjs', './.prettierrc.cjs', './addon-main.cjs'],
       parserOptions: {
         sourceType: 'script',
       },
