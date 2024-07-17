@@ -1,7 +1,5 @@
 # Changelog
 
-
-
 ## v7.5.0 (2024-07-17)
 
 #### :rocket: Enhancement
