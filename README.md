@@ -18,7 +18,7 @@ will be automatically restored to their original methods at the end of each test
 ## Compatibility
 
 - Sinon.js v15 or above
-- Ember.js v3.28 or above
+- Ember.js v4.12 or above
 - Embroider or ember-auto-import v2
 
 ## Installation

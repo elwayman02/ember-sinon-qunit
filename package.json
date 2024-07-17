@@ -29,6 +29,7 @@
     "test:ember-compatibility": "yarn workspace test-app run test:ember-compatibility"
   },
   "devDependencies": {
+    "@glint/core": "^1.2.1",
     "@release-it-plugins/lerna-changelog": "^7.0.0",
     "@release-it-plugins/workspaces": "^4.2.0",
     "concurrently": "^8.2.1",
@@ -53,5 +54,9 @@
       "tokenRef": "GITHUB_AUTH"
     },
     "npm": false
+  },
+  "volta": {
+    "node": "20.15.1",
+    "yarn": "1.22.22"
   }
 }
