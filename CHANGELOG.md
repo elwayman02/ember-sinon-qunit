@@ -1,6 +1,22 @@
 # Changelog
 
 
+
+## v7.5.0 (2024-07-17)
+
+#### :rocket: Enhancement
+* [#1224](https://github.com/elwayman02/ember-sinon-qunit/pull/1224) Add sinon v18 to peerDependencies ([@SergeAstapov](https://github.com/SergeAstapov))
+
+#### :house: Internal
+* [#1259](https://github.com/elwayman02/ember-sinon-qunit/pull/1259) Ember Blueprint Updates ([@elwayman02](https://github.com/elwayman02))
+* [#930](https://github.com/elwayman02/ember-sinon-qunit/pull/930) Sync setup with @embroider/addon-blueprint ([@SergeAstapov](https://github.com/SergeAstapov))
+* [#929](https://github.com/elwayman02/ember-sinon-qunit/pull/929) Add Ember.js 4.12 LTS to ember-try config ([@SergeAstapov](https://github.com/SergeAstapov))
+* [#928](https://github.com/elwayman02/ember-sinon-qunit/pull/928) Copy README.md during release ([@SergeAstapov](https://github.com/SergeAstapov))
+
+#### Committers: 2
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+- Sergey Astapov ([@SergeAstapov](https://github.com/SergeAstapov))
+
 ## v7.4.0 (2023-11-01)
 
 #### :rocket: Enhancement

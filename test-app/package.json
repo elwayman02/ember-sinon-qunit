@@ -1,6 +1,6 @@
 {
   "name": "test-app",
-  "version": "0.0.0",
+  "version": "7.5.0",
   "private": true,
   "description": "Test app for ember-sinon-qunit addon",
   "repository": "https://github.com/elwayman02/ember-sinon-qunit",
@@ -89,7 +89,7 @@
     "ember-page-title": "^8.2.3",
     "ember-qunit": "^8.1.0",
     "ember-resolver": "^12.0.1",
-    "ember-sinon-qunit": "7.4.0",
+    "ember-sinon-qunit": "7.5.0",
     "ember-source": "~5.10.1",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^6.0.0",
