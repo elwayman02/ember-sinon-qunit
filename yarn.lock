@@ -1311,10 +1311,10 @@
   resolved "https://registry.yarnpkg.com/@ember/string/-/string-4.0.0.tgz#24fe5cda227c9e6634e6e0b550944a3a13437878"
   integrity sha512-IMVyVE72twuAMSYcHzWSgtgYTtzlHlKSGW8vEbztnnmkU6uo7kVHmiqSN9R4RkBhzvh0VD4G76Eph+55t3iNIA==
 
-"@ember/test-helpers@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-3.3.0.tgz#abf83ff2b111493d25266cb90327134498cb9090"
-  integrity sha512-HEI28wtjnQuEj9+DstHUEEKPtqPAEVN9AAVr4EifVCd3DyEDy0m6hFT4qbap1WxAIktLja2QXGJg50lVWzZc5g==
+"@ember/test-helpers@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-3.3.1.tgz#b19287dbb7ba169a2033574bb5021c0490b199b9"
+  integrity sha512-h4uFBy4pquBtHsHI+tx9S0wtMmn1L+8dkXiDiyoqG1+3e0Awk6GBujiFM9s4ANq6wC8uIhC3wEFyts10h2OAoQ==
   dependencies:
     "@ember/test-waiters" "^3.0.2"
     "@embroider/macros" "^1.10.0"
@@ -1323,20 +1323,10 @@
     broccoli-funnel "^3.0.8"
     dom-element-descriptors "^0.5.0"
     ember-auto-import "^2.6.0"
-    ember-cli-babel "^7.26.11"
+    ember-cli-babel "^8.2.0"
     ember-cli-htmlbars "^6.2.0"
 
-"@ember/test-waiters@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@ember/test-waiters/-/test-waiters-3.0.2.tgz#5b950c580a1891ed1d4ee64f9c6bacf49a15ea6f"
-  integrity sha512-H8Q3Xy9rlqhDKnQpwt2pzAYDouww4TZIGSI1pZJhM7mQIGufQKuB0ijzn/yugA6Z+bNdjYp1HioP8Y4hn2zazQ==
-  dependencies:
-    calculate-cache-key-for-tree "^2.0.0"
-    ember-cli-babel "^7.26.6"
-    ember-cli-version-checker "^5.1.2"
-    semver "^7.3.5"
-
-"@ember/test-waiters@^3.1.0":
+"@ember/test-waiters@^3.0.2", "@ember/test-waiters@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@ember/test-waiters/-/test-waiters-3.1.0.tgz#61399919cbf793978da0b8bfdfdb7bca0cb80e9e"
   integrity sha512-bb9h95ktG2wKY9+ja1sdsFBdOms2lB19VWs8wmNpzgHv1NCetonBoV5jHBV4DHt0uS1tg9z66cZqhUVlYs96KQ==
@@ -1401,7 +1391,7 @@
     typescript-memoize "^1.0.1"
     walk-sync "^3.0.0"
 
-"@embroider/macros@1.16.5":
+"@embroider/macros@1.16.5", "@embroider/macros@^1.0.0", "@embroider/macros@^1.10.0", "@embroider/macros@^1.13.1", "@embroider/macros@^1.16.1":
   version "1.16.5"
   resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-1.16.5.tgz#871addab2103b554c6b6a3a337c00e3f0a0462ac"
   integrity sha512-Oz8bUZvZzOV1Gk3qSgIzZJJzs6acclSTcEFyB+KdKbKqjTC3uebn53aU2gAlLU7/YdTRZrg2gNbQuwAp+tGkGg==
@@ -1415,24 +1405,10 @@
     resolve "^1.20.0"
     semver "^7.3.2"
 
-"@embroider/macros@^1.0.0", "@embroider/macros@^1.10.0", "@embroider/macros@^1.13.1", "@embroider/macros@^1.16.1":
-  version "1.16.3"
-  resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-1.16.3.tgz#fd57bc069f27047b4dc22096ad1152757bbe5d44"
-  integrity sha512-WOQjl3aT3I5gG4XDLpCJjrKhNSapgH7FiLtpzM6lGfTFoA90rZojfjf5MELwzqlhjug0U2xLvyjw0l+kiBmDig==
-  dependencies:
-    "@embroider/shared-internals" "2.6.1"
-    assert-never "^1.2.1"
-    babel-import-util "^2.0.0"
-    ember-cli-babel "^7.26.6"
-    find-up "^5.0.0"
-    lodash "^4.17.21"
-    resolve "^1.20.0"
-    semver "^7.3.2"
-
-"@embroider/shared-internals@2.6.1", "@embroider/shared-internals@^2.0.0", "@embroider/shared-internals@^2.6.0":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-2.6.1.tgz#415fa08258dca7e8396922da680d424a3e2e12f8"
-  integrity sha512-STU1oDP36JQY+zpivyAfXGXadN664d+DOiVNBUW+4AAuWLVxIRWDIuFj8UxzREXZU9trZY8vOhKwKQtfEgdwSg==
+"@embroider/shared-internals@2.6.2":
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-2.6.2.tgz#66297a8606587108f9dbcbaa1a9dcc6b4a4ca605"
+  integrity sha512-jL3Bjn8C73AUBlTex+VixP7YmqvPNN/BZFB85odTstzLFOuR8y2mmGiuWbq17qNuFyoxc6xtndMnAeqwCXBNkA==
   dependencies:
     babel-import-util "^2.0.0"
     debug "^4.3.2"
@@ -1445,10 +1421,10 @@
     semver "^7.3.5"
     typescript-memoize "^1.0.1"
 
-"@embroider/shared-internals@2.6.2":
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-2.6.2.tgz#66297a8606587108f9dbcbaa1a9dcc6b4a4ca605"
-  integrity sha512-jL3Bjn8C73AUBlTex+VixP7YmqvPNN/BZFB85odTstzLFOuR8y2mmGiuWbq17qNuFyoxc6xtndMnAeqwCXBNkA==
+"@embroider/shared-internals@^2.0.0", "@embroider/shared-internals@^2.6.0":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-2.6.1.tgz#415fa08258dca7e8396922da680d424a3e2e12f8"
+  integrity sha512-STU1oDP36JQY+zpivyAfXGXadN664d+DOiVNBUW+4AAuWLVxIRWDIuFj8UxzREXZU9trZY8vOhKwKQtfEgdwSg==
   dependencies:
     babel-import-util "^2.0.0"
     debug "^4.3.2"
