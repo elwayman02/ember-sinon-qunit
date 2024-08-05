@@ -29,7 +29,7 @@
     "test:ember": "ember test"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.9",
+    "@babel/core": "^7.25.2",
     "@ember/optional-features": "^2.1.0",
     "@ember/string": "^4.0.0",
     "@ember/test-helpers": "^3.3.1",
