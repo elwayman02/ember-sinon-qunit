@@ -885,10 +885,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/plugin-transform-typescript@^7.13.0", "@babel/plugin-transform-typescript@^7.16.8", "@babel/plugin-transform-typescript@^7.20.13", "@babel/plugin-transform-typescript@^7.25.0":
-  version "7.25.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.25.0.tgz#56f47fb87b86a97caa9c7770920a1967d40ac86e"
-  integrity sha512-LZicxFzHIw+Sa3pzgMgSz6gdpsdkfiMObHUzhSIrwKF0+/rP/nuR49u79pSS+zIFJ1FeGeqQD2Dq4QGFbOVvSw==
+"@babel/plugin-transform-typescript@^7.13.0", "@babel/plugin-transform-typescript@^7.16.8", "@babel/plugin-transform-typescript@^7.20.13", "@babel/plugin-transform-typescript@^7.25.2":
+  version "7.25.2"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.25.2.tgz#237c5d10de6d493be31637c6b9fa30b6c5461add"
+  integrity sha512-lBwRvjSmqiMYe/pS0+1gggjJleUJi7NzjvQ1Fkqtt69hBa/0t1YuW/MLQMAPixfwaQOHUXsd6jeU3Z+vdGv3+A==
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.24.7"
     "@babel/helper-create-class-features-plugin" "^7.25.0"
