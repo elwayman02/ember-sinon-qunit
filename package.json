@@ -32,7 +32,7 @@
     "@glint/core": "^1.2.1",
     "@release-it-plugins/lerna-changelog": "^7.0.0",
     "@release-it-plugins/workspaces": "^4.2.0",
-    "concurrently": "^8.2.1",
+    "concurrently": "^9.0.0",
     "release-it": "^17.6.0"
   },
   "release-it": {
