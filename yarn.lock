@@ -5193,10 +5193,10 @@ decompress-response@^6.0.0:
   dependencies:
     mimic-response "^3.1.0"
 
-decorator-transforms@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/decorator-transforms/-/decorator-transforms-2.0.0.tgz#4e9178a8905c81ff79f4078dc6dfb716244ecd37"
-  integrity sha512-ETfQccGcotK01YJsoB0AGTdUp7kS9jI93mBzrRY5Oyo+bOJfa2UKTSjCNf+iRNwAWBmBKlbiCcyL4tkY4C4dZQ==
+decorator-transforms@^2.0.0, decorator-transforms@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/decorator-transforms/-/decorator-transforms-2.2.0.tgz#53e118a668c4d5887f825546c9dbb10e3d34774a"
+  integrity sha512-o+NZXfBpRQJCWZzdVN6nB0Bf4KnD0gZO8hSk80OktIoClvB1YmBZC6js2k34EFAwF+c+P3Q6vYmiDzGoXwp1OQ==
   dependencies:
     "@babel/plugin-syntax-decorators" "^7.23.3"
     babel-import-util "^3.0.0"

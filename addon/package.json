@@ -60,7 +60,7 @@
   "dependencies": {
     "@embroider/addon-shim": "^1.8.9",
     "@types/sinon": "^17.0.3",
-    "decorator-transforms": "^2.0.0"
+    "decorator-transforms": "^2.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
