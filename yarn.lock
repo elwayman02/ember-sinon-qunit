@@ -1268,14 +1268,14 @@
     ember-cli-version-checker "^5.1.2"
     semver "^7.3.5"
 
-"@embroider/addon-dev@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@embroider/addon-dev/-/addon-dev-6.0.1.tgz#f029700a9e75dd1042b78f4820a311d00aa71e76"
-  integrity sha512-0dOvwrETKHQtzLuYQ9nAPSbWWBvf4DQzy8yR35SAKqFYO+P7xEqK6HcEdHFkjs6+wUyhSXwAoIEbNTDJLv4d6w==
+"@embroider/addon-dev@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@embroider/addon-dev/-/addon-dev-7.0.0.tgz#2ca19eaefe7ffdc23227433532706c8fdc903a7e"
+  integrity sha512-jxRh++d2YXnEAjPxvjHGsTqx/Gd9U3LDeuLYBhLW6wzXakCyvU3K6V7jbYfx5fAxbdGkr2jFIp2gmGEsai2fpQ==
   dependencies:
-    "@embroider/core" "^3.4.18"
+    "@embroider/core" "^3.4.19"
     "@rollup/pluginutils" "^4.1.1"
-    content-tag "^2.0.1"
+    content-tag "^3.0.0"
     fs-extra "^10.0.0"
     minimatch "^3.0.4"
     rollup-plugin-copy-assets "^2.0.3"
@@ -1292,7 +1292,7 @@
     common-ancestor-path "^1.0.1"
     semver "^7.3.8"
 
-"@embroider/core@^3.4.18":
+"@embroider/core@^3.4.19":
   version "3.4.19"
   resolved "https://registry.yarnpkg.com/@embroider/core/-/core-3.4.19.tgz#41066c214a534adebcf7aa9c50a4d36380985b39"
   integrity sha512-nnjQzXa+LkbqcSl7+a5sX6UKzeyHaiKrYCi/Wg5EG5OzyukiFmX2ZNI44fJ/U69htIphCZXAvLsMsEsUPm94ZA==
@@ -4861,6 +4861,11 @@ content-tag@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/content-tag/-/content-tag-2.0.1.tgz#0b908ed97e13df60b019039713ab63f1b73f2b22"
   integrity sha512-jxsETSDs5NbNwyiDuIp672fUMhUyu8Qxc5MOBOJOcgW/fQESI6o5K1LBDrnEE7Bh810a685lWEZHTF4jQYGEEw==
+
+content-tag@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/content-tag/-/content-tag-3.0.0.tgz#b25382edf6c46abf79e6bffb83c2118713af546e"
+  integrity sha512-HxWPmF9hzehv5PV7TSK7QSzlVBhmwQA8NgBrXmL+fqXfM3L1r3ResAPzeiGbxra3Zw6U3gdhw3cIDJADQnuCVQ==
 
 content-type@~1.0.4, content-type@~1.0.5:
   version "1.0.5"
