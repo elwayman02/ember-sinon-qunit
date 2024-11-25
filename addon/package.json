@@ -108,7 +108,7 @@
     "prettier-plugin-ember-template-tag": "^2.0.4",
     "rollup": "^4.27.2",
     "rollup-plugin-copy": "^3.5.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "ember-source": ">=3.28.0",
