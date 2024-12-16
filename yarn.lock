@@ -1494,7 +1494,7 @@
   dependencies:
     "@simple-dom/interface" "^1.4.0"
 
-"@glimmer/manager@0.92.4", "@glimmer/manager@>= 0.83.0":
+"@glimmer/manager@0.92.4", "@glimmer/manager@>=0.83.0 <0.93.0":
   version "0.92.4"
   resolved "https://registry.yarnpkg.com/@glimmer/manager/-/manager-0.92.4.tgz#cdc316a64c696fe5a0c07acce5ee5d88e87f238e"
   integrity sha512-YMoarZT/+Ft2YSd+Wuu5McVsdP9y6jeAdVQGYFpno3NlL3TXYbl7ELtK7OGxFLjzQE01BdiUZZRvcY+a/s9+CQ==
@@ -1578,7 +1578,7 @@
     "@glimmer/util" "0.84.3"
     "@glimmer/validator" "0.84.3"
 
-"@glimmer/runtime@0.92.4", "@glimmer/runtime@>= 0.83.0":
+"@glimmer/runtime@0.92.4", "@glimmer/runtime@>=0.83.0 <0.93.0":
   version "0.92.4"
   resolved "https://registry.yarnpkg.com/@glimmer/runtime/-/runtime-0.92.4.tgz#5294534edeb25330f6e3c0fb3d66f4955654258c"
   integrity sha512-ISqM/8hVh+fY/gnLAAPKfts4CvnJBOyCYAXgGccIlzzQrSVLaz0NoRiWTLGj5B/3xyPbqLwYPDvlTsOjYtvPoA==
@@ -2442,13 +2442,13 @@
   resolved "https://registry.yarnpkg.com/@types/ember__error/-/ember__error-4.0.6.tgz#ff3b18fc8525c73f92828789bb4fed908e553df9"
   integrity sha512-vYrLaGGjHkN14K89Vm8yqB2mkpJQefE5w7QJkkgYyV+smzns1vKlPbvuFevRtoeYNn4u4yY0JyF7HceNkm3H0Q==
 
-"@types/ember__helper@^4.0.5", "@types/ember__helper@^4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@types/ember__helper/-/ember__helper-4.0.8.tgz#5f2d292f7127946d39f5283c5d13399c45c90506"
-  integrity sha512-IhHkZHmwPx7zjabIr315qpQwgje+ASq5y6If1ZtRSwjm/0rL2Qa9FQu+h4cYW5jWdn2ptJ1pZZJTCe2uEVxsIQ==
+"@types/ember__helper@^4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@types/ember__helper/-/ember__helper-4.0.9.tgz#9f1b4b9671873607d73fcb74d81414c957a194cd"
+  integrity sha512-vs7ye+DDXBm4bmqS+StUXoH0B7DzVs9eAnUlyy5Y9Y+IP7STGaKf/6oFMBBsJRVTbvv91zZXTwpGvDcTD1JP6w==
   dependencies:
-    "@glimmer/manager" ">= 0.83.0"
-    "@glimmer/runtime" ">= 0.83.0"
+    "@glimmer/manager" ">=0.83.0 <0.93.0"
+    "@glimmer/runtime" ">=0.83.0 <0.93.0"
     "@types/ember" "*"
 
 "@types/ember__modifier@^4.0.8", "@types/ember__modifier@^4.0.9":
