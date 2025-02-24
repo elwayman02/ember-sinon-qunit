@@ -67,7 +67,7 @@
     "@types/ember__utils": "^4.0.7",
     "@types/qunit": "^2.19.12",
     "@types/rsvp": "^4.0.9",
-    "@types/sinon": "^17.0.3",
+    "@types/sinon": "^17.0.4",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "broccoli-asset-rev": "^3.0.0",
