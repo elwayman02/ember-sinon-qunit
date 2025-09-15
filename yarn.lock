@@ -1495,6 +1495,14 @@
   dependencies:
     "@simple-dom/interface" "^1.4.0"
 
+"@glimmer/interfaces@0.94.6":
+  version "0.94.6"
+  resolved "https://registry.yarnpkg.com/@glimmer/interfaces/-/interfaces-0.94.6.tgz#a4a2877730f37587326cab361de81cc0da71a823"
+  integrity sha512-sp/1WePvB/8O+jrcUHwjboNPTKrdGicuHKA9T/lh0vkYK2qM5Xz4i25lQMQ38tEMiw7KixrjHiTUiaXRld+IwA==
+  dependencies:
+    "@simple-dom/interface" "^1.4.0"
+    type-fest "^4.35.0"
+
 "@glimmer/manager@0.92.4", "@glimmer/manager@>=0.83.0 <0.93.0":
   version "0.92.4"
   resolved "https://registry.yarnpkg.com/@glimmer/manager/-/manager-0.92.4.tgz#cdc316a64c696fe5a0c07acce5ee5d88e87f238e"
@@ -1597,7 +1605,7 @@
     "@glimmer/vm" "0.92.3"
     "@glimmer/wire-format" "0.92.3"
 
-"@glimmer/syntax@0.92.3", "@glimmer/syntax@^0.92.0":
+"@glimmer/syntax@0.92.3":
   version "0.92.3"
   resolved "https://registry.yarnpkg.com/@glimmer/syntax/-/syntax-0.92.3.tgz#0b0923d37469509fcc46243678c7ef8cb41a17de"
   integrity sha512-7wPKQmULyXCYf0KvbPmfrs/skPISH2QGR9atCnmDWnHyLv5SSZVLm1P0Ctrpta6+Ci3uGQb7hGk0IjsLEavcYQ==
@@ -1606,6 +1614,17 @@
     "@glimmer/util" "0.92.3"
     "@glimmer/wire-format" "0.92.3"
     "@handlebars/parser" "~2.0.0"
+    simple-html-tokenizer "^0.5.11"
+
+"@glimmer/syntax@>= 0.92.0":
+  version "0.95.0"
+  resolved "https://registry.yarnpkg.com/@glimmer/syntax/-/syntax-0.95.0.tgz#0d4c06bdae55087e3262b06d82c31a5586230fc5"
+  integrity sha512-W/PHdODnpONsXjbbdY9nedgIHpglMfOzncf/moLVrKIcCfeQhw2vG07Rs/YW8KeJCgJRCLkQsi+Ix7XvrurGAg==
+  dependencies:
+    "@glimmer/interfaces" "0.94.6"
+    "@glimmer/util" "0.94.8"
+    "@glimmer/wire-format" "0.94.8"
+    "@handlebars/parser" "~2.2.0"
     simple-html-tokenizer "^0.5.11"
 
 "@glimmer/syntax@^0.84.3":
@@ -1642,6 +1661,13 @@
   dependencies:
     "@glimmer/env" "0.1.7"
     "@glimmer/interfaces" "0.92.3"
+
+"@glimmer/util@0.94.8":
+  version "0.94.8"
+  resolved "https://registry.yarnpkg.com/@glimmer/util/-/util-0.94.8.tgz#13eb1003c2f5df84aedd73907745ec02baf4f8f8"
+  integrity sha512-HfCKeZ74clF9BsPDBOqK/yRNa/ke6niXFPM6zRn9OVYw+ZAidLs7V8He/xljUHlLRL322kaZZY8XxRW7ALEwyg==
+  dependencies:
+    "@glimmer/interfaces" "0.94.6"
 
 "@glimmer/util@^0.44.0":
   version "0.44.0"
@@ -1694,6 +1720,13 @@
     "@glimmer/interfaces" "0.92.3"
     "@glimmer/util" "0.92.3"
 
+"@glimmer/wire-format@0.94.8":
+  version "0.94.8"
+  resolved "https://registry.yarnpkg.com/@glimmer/wire-format/-/wire-format-0.94.8.tgz#439877561779b7aa19040879ecf915b3cd8b5fbe"
+  integrity sha512-A+Cp5m6vZMAEu0Kg/YwU2dJZXyYxVJs2zI57d3CP6NctmX7FsT8WjViiRUmt5abVmMmRH5b8BUovqY6GSMAdrw==
+  dependencies:
+    "@glimmer/interfaces" "0.94.6"
+
 "@glint/core@^1.5.2":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@glint/core/-/core-1.5.2.tgz#8667c5dbfd2a3527eac434f47ad45a9061f0c255"
@@ -1730,6 +1763,11 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@handlebars/parser/-/parser-2.0.0.tgz#5e8b7298f31ff8f7b260e6b7363c7e9ceed7d9c5"
   integrity sha512-EP9uEDZv/L5Qh9IWuMUGJRfwhXJ4h1dqKTT4/3+tY0eu7sPis7xh23j61SYUnNF4vqCQvvUXpDo9Bh/+q1zASA==
+
+"@handlebars/parser@~2.2.0":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@handlebars/parser/-/parser-2.2.1.tgz#ce95a3b2c6586a4358341b44ef6b8aad881d1b78"
+  integrity sha512-D76vKOZFEGA9v6g0rZTYTQDUXNopCblW1Zeas3EEVrbdeh8gWrCEO9/goocKmcgtqAwv1Md76p58UQp7HeFTEw==
 
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
@@ -2780,6 +2818,11 @@
   dependencies:
     "@typescript-eslint/types" "7.18.0"
     "@typescript-eslint/visitor-keys" "7.18.0"
+
+"@typescript-eslint/tsconfig-utils@^8.38.0":
+  version "8.43.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.43.0.tgz#e6721dba183d61769a90ffdad202aebc383b18c8"
+  integrity sha512-ALC2prjZcj2YqqL5X/bwWQmHA2em6/94GcbB/KKu5SX3EBDOsqztmmX1kMkvAJHzxk7TazKzJfFiEIagNV3qEA==
 
 "@typescript-eslint/type-utils@7.18.0":
   version "7.18.0"
@@ -5830,13 +5873,14 @@ ember-data@~5.3.9:
     "@warp-drive/build-config" "0.0.0-beta.7"
     "@warp-drive/core-types" "0.0.0-beta.12"
 
-ember-eslint-parser@^0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/ember-eslint-parser/-/ember-eslint-parser-0.5.6.tgz#180e85f661eb6bfe83d4533f92a9bd9b71054cb7"
-  integrity sha512-mtneR5Z0TlGUR5tutJFv6xOjt5hLk532KoBooEb6rZXTXJbZvzEvXuUrYocCT4Os7IGHp3Elsjgd5tB9ufuPPQ==
+ember-eslint-parser@^0.5.9:
+  version "0.5.11"
+  resolved "https://registry.yarnpkg.com/ember-eslint-parser/-/ember-eslint-parser-0.5.11.tgz#7bc99473eb9db5d138330ec35c0fb39a9b3b353a"
+  integrity sha512-YuYc+bxDGHhNdz2yEZebwwzdiErHLLGud/Q2VE6J7czuMQ/vdiL8SYWBHWyYK691MCFzrxVYpSJb89+yjXv8yg==
   dependencies:
     "@babel/eslint-parser" "^7.23.10"
-    "@glimmer/syntax" "^0.92.0"
+    "@glimmer/syntax" ">= 0.92.0"
+    "@typescript-eslint/tsconfig-utils" "^8.38.0"
     content-tag "^2.0.1"
     eslint-scope "^7.2.2"
     html-tags "^3.3.1"
@@ -6409,14 +6453,14 @@ eslint-module-utils@^2.12.0:
   dependencies:
     debug "^3.2.7"
 
-eslint-plugin-ember@^12.3.3:
-  version "12.3.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-12.3.3.tgz#27b2a393299054586eda5bea0c23aa9126608458"
-  integrity sha512-OXf3+XofsSMW/zGnp6B1cB2veC9zLzby8RGmHkxNwRHGLs/fYNVBbpwkmdZhzR8+IMN3wjtLR4iNLvkKOAT5bg==
+eslint-plugin-ember@^12.7.4:
+  version "12.7.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-12.7.4.tgz#b7a0c8054946ce1f3e4fbe771c97d13a538762de"
+  integrity sha512-0q6C9VEnHe9hbgs6TgFWHVyEZRrPwOdkqkiLFh7HkxQH0Y/RhCLCLiU695sfTacIk8ofzLcQSp9Fhd1WIZY9eA==
   dependencies:
     "@ember-data/rfc395-data" "^0.0.4"
     css-tree "^3.0.1"
-    ember-eslint-parser "^0.5.6"
+    ember-eslint-parser "^0.5.9"
     ember-rfc176-data "^0.3.18"
     eslint-utils "^3.0.0"
     estraverse "^5.3.0"
@@ -12937,6 +12981,11 @@ type-fest@^4.18.2, type-fest@^4.21.0:
   version "4.26.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.26.1.tgz#a4a17fa314f976dd3e6d6675ef6c775c16d7955e"
   integrity sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==
+
+type-fest@^4.35.0:
+  version "4.41.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.41.0.tgz#6ae1c8e5731273c2bf1f58ad39cbae2c91a46c58"
+  integrity sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==
 
 type-is@~1.6.18:
   version "1.6.18"
